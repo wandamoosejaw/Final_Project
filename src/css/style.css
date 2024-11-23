@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper */
+#wrapper {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+/* Left Panel */
+#left_panel {
+    width: 15%; /* Default width */
+    background-color: #2c4964; /* Dark blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+
+/* Logo */
+#logo {
+    width: 150px    ;
+    margin-bottom: 30px;
+}
+
+/* Navigation */
+#left_panel div {
+    width: 100%;
+    padding-top: 200px;
+}
+
+#left_panel label {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    background-color: #2c4964;
+    cursor: pointer;
+    padding-left: 20px;
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+#left_panel label:hover {
+    background-color: #365b82; /* Hover effect */
+}
+
+#left_panel label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+}
+
+#left_panel label:last-of-type {
+    margin-top: 100%;  /* signout */
+}
+
+/* Right Panel */
+#right_panel {
+    flex-grow: 1;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 90px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 20px;
+    position: relative;
+}
+
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15px;
+    text-align: right;
+}
+
+#fullname {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+#status {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+#profile_icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    #left_panel {
+        width: 20%; /* Increase usability */
+    }
+
+    #left_panel label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #left_panel {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #left_panel {
+        width: 50%;
+    }
+}
