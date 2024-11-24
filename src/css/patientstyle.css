@@ -1,0 +1,473 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper */
+#wrapper {
+    display: flex;
+    height: 100vh;
+    color: black;
+}
+
+/* Left Panel */
+#left_panel {
+    position: fixed; /* Keep the panel fixed while scrolling */
+    top: 0;
+    left: 0;
+    width: 15%; /* Default width */
+    height: 100vh; /* Full viewport height */
+    background-color: #2c4964; /* Dark blue */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    padding-top: 20px;
+    overflow-y: auto; /* Enable scrolling if needed */
+    transition: width 0.3s ease; /* Smooth resizing */
+}
+
+/* Logo */
+#logo {
+    width: 150px;
+    margin: 0 auto 30px auto; /* Center the logo */
+}
+
+/* Navigation */
+#left_panel div {
+    width: 100%;
+}
+
+/* Navigation Labels */
+#left_panel label {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align icons and text to the left */
+    font-size: 16px;
+    background-color: #2c4964;
+    cursor: pointer;
+    padding-left: 20px; /* Add padding for alignment */
+    transition: background-color 0.2s ease;
+    color: white;
+}
+
+#left_panel label:hover {
+    background-color: #365b82; /* Hover effect */
+}
+
+#left_panel label img {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px; /* Space between the icon and text */
+}
+
+/* Push Sign Out to Bottom */
+#left_panel label:last-of-type {
+    margin-top: auto; /* Ensure "Sign Out" stays at the bottom */
+}
+
+
+/* Right Panel */
+#right_panel {
+    margin-left: 15%; /* Offset the right panel to account for the fixed left panel's width */
+    flex-grow: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px; /* Optional padding for consistent spacing */
+    overflow-y: auto; /* Allow scrolling for the right panel if needed */
+}
+
+/* Header */
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 0 10px;
+    position: relative;
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Info Section */
+#info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15px;
+    text-align: right;
+}
+
+#fullname {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+#status {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+}
+
+#profile_icon {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ddd;
+    object-fit: cover;
+}
+
+/* Booking Container */
+.booking-container {
+    width: calc(100% - 48px); /* Subtract total margin (24px * 2) from width */
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 20px;
+    padding: 15px 0;
+    padding-left: 10px;
+    background-color: rgba(136, 186, 255, 0.15);
+}
+
+/* Inner Content Alignment */
+.booking-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.booking-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    margin-left: -70px; /* Adjust as needed to align title */
+    text-align: left;
+    color: #333;
+}
+
+/* Steps Container */
+.steps-container {
+    position: relative;
+    padding: 20px 0;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 40px;
+    left: 12%; /* Add space from left */
+    right: 12%; /* Add space from right */
+    height: 4px;
+    background-color: #2c4964;
+    z-index: 1;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    text-align: center;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #2c4964;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.step h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.step p {
+    font-size: 0.75rem;
+    color: #666;
+    padding: 0 10px;
+}
+
+.greetings{
+    width: calc(100% - 48px); /* Subtract total margin (24px * 2) from width */
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 5px;
+    padding: 10px 0;
+    padding-left: 10px;
+
+}
+
+.greetings h3{
+    font-size: 2rem;
+    color: rgb(205, 106, 48);
+    margin-left: -10px;
+}
+
+.slogan-container {
+    width: calc(100% - 48px);
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 50px 70px; /* Adjusted padding for better text placement */
+    background: linear-gradient(to right, #2c4964, #365b82); /* Gradient background */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add the overlay image */
+.slogan-container {
+    width: calc(100% - 48px);
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: px;
+    margin-bottom: 10px;
+    padding: 50px 40px ; /* Adjusted padding to move text left */
+    background: linear-gradient(to right, #2c4964, #365b82); /* Gradient background */
+    position: relative;
+    overflow: hidden;
+}
+
+.slogan-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: url('/src/icons/patient/bookan.png'); /* Add your image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; /* Makes the image subtle */
+}
+
+.slogan-h3 h3 {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 8px;
+    position: relative;
+    margin-top: -25px;
+    z-index: 2; /* Ensures text stays above the background image */
+}
+
+.slogan-p p {
+    color: #8da9c4; /* Light blue color for the subtitle */
+    font-size: 16px;
+    margin: 0;
+    font-style: italic;
+    position: relative;
+    z-index: 2; /* Ensures text stays above the background image */
+}
+
+
+.search-container{
+    display: flex;
+    width: calc(100% - 48px); /* Subtract total margin (24px * 2) from width */
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 5px;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.search-field {
+    position: relative;
+    margin-right: 10px;
+}
+.search-input {
+    padding: 15px;
+    padding-left: 40px; /* Space for the image */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 600px;
+    color: #666;
+    margin-left: -10px;
+}
+.search-button {
+    padding: 10px 50px;
+    border: none;
+    background-color: #2c4964;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Search-by container */
+.search-by {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+/* Label styling */
+.search-by .label {
+    font-size: 1em; /* Ensure consistent font size */
+    margin-right: 10px; /* Adjust spacing between labels */
+    padding: 5px 10px; /* Add padding inside the labels */
+    color: gray; /* Set text color to gray */
+    border: 1px solid gray; /* Set border style */
+    border-radius: 25px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor for interactivity */
+    transition: background-color 0.3s ease; /* Optional hover effect */
+}
+
+/* Hover effect for labels */
+.search-by .label:hover {
+    background-color: #2c4964; /* Light gray background on hover */
+}
+
+.search-by p{
+    padding-right: 10px;
+}
+
+.text-container{
+    width: calc(100% - 48px); /* Subtract total margin (24px * 2) from width */
+    max-width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+    padding: 10px 0;
+    padding-left: 10px;
+}
+
+.text-container h3{
+    font-size: 1.5rem;
+    color: #2c4964;
+    margin-left: -10px;
+}
+
+/*Specialization css*/
+.specialization-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to new rows if needed */
+    gap: -15px; /* Space between items */
+    justify-content: space-between; /* Distribute items evenly */
+    margin: 25px;
+}
+
+/* Individual specialization items */
+.specialization-item {
+    width: 290px; /* Increased width */
+    height: 150px; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #f5f5f5; /* Optional background color for the box */
+    overflow: hidden; /* Ensure overlay and images fit within the box */
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Animation for hover */
+}
+
+.specialization-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Image with overlay */
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Image now takes full height of the box */
+    display: flex;
+    align-items: center; /* Centers text vertically */
+    justify-content: center; /* Centers text horizontally */
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits nicely */
+    filter: brightness(70%); /* Darkens the image slightly for better text visibility */
+}
+
+.image-overlay .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* 25% color overlay */
+    z-index: 1;
+}
+
+/* Text styling inside the image */
+.specialization-item p {
+    position: absolute; /* Absolute positioning to overlay the image */
+    top: 70%; /* Place text vertically in the middle */
+    left: 50%; /* Place text horizontally in the middle */
+    transform: translate(-45%, -50%); /* Adjust centering: fine-tune by changing values */
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white; /* White text for contrast */
+    text-align: left;
+    z-index: 2; /* Ensures text stays above the image and overlay */
+    width: 100%;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    #left_panel {
+        width: 20%; /* Increase usability */
+    }
+
+    #left_panel label {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #left_panel {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #left_panel {
+        width: 50%;
+    }
+}
