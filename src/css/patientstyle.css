@@ -45,7 +45,7 @@ body {
 }
 
 /* Navigation Labels */
-#left_panel label {
+#left_panel label a{
     width: 100%;
     height: 60px;
     display: flex;
@@ -57,6 +57,7 @@ body {
     padding-left: 20px; /* Add padding for alignment */
     transition: background-color 0.2s ease;
     color: white;
+    text-decoration: none; /* Removes the underline */
 }
 
 #left_panel label:hover {
@@ -151,8 +152,6 @@ body {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    margin-left: -70px; /* Adjust as needed to align title */
-    text-align: left;
     color: #333;
 }
 
@@ -448,26 +447,319 @@ body {
     width: 100%;
 }
 
+/* Notification HTML CSSS start here*/
+.notification-p{
+    display: flex;
+    font-size: 3rem;
+    color: rgb(205, 106, 48);
+}
+
+.notification-wrapper{
+    display: inline-block;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    min-height: 100%;
+    padding: 10px;
+
+}
+
+.notification-container{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    width: 100%;
+    height: 150px; 
+       gap: 12px;
+    border: 1px solid #cfd9de;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
+    margin-bottom: 10px
+}
+
+.notification-image{
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(173, 216, 230, 0.5);
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid  #2c4964;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
+
+
+}
+
+.sign_icon {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.alert{
+    width: 100%;
+}
+.alert h2{
+    color: #2c4964;
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.alert p{
+    font-size: 1em;
+}
+
+.alert .date{
+    margin-left: 90%;
+}
+
 
 /* Media Queries */
+
+/* Tablet screens (1024px and smaller) */
 @media screen and (max-width: 1024px) {
     #left_panel {
-        width: 20%; /* Increase usability */
+        width: 20%; /* Adjust left panel width */
     }
 
-    #left_panel label {
-        font-size: 14px;
+    #right_panel {
+        margin-left: 20%; /* Adjust right panel margin */
+    }
+
+    #header {
+        justify-content: flex-start; /* Align header content to the left */
+    }
+
+    /*patient homepage @media start here */
+    .booking-title {
+        font-size: 1.1rem; /* Slightly smaller font size */
+        margin-left: -50px; /* Adjust alignment */
+        text-align: left;
+        padding-left: 40px;
+
+
+    }
+
+    .step h4 {
+        font-size: 0.7rem; /* Adjust heading font size */
+    }
+
+    .step p {
+        font-size: 0.6rem; /* Adjust paragraph font size */
+    }
+
+    .search-container{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .search-button{
+        margin-top: 20px;
+    }
+
+    .search-input {
+        width: 400px;
+    }
+
+    /*notifcation @media start here*/
+    .notification-wrapper {
+        padding: 10px;
+    }
+
+    .notification-container {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .notification-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .sign_icon {
+        width: 40px; /* Adjust size for tablets */
+        height: 40px;
+        margin-top: 20px; /* Reduce top margin */
+        margin-left: 20px; /* Adjust left margin */
+    }
+
+    .alert {
+        text-align: left;
+    }
+
+    .alert h2 {
+        font-size: 1.5rem; /* Scale down headline */
+    }
+
+    .alert p {
+        font-size: 0.9rem; /* Scale down paragraph */
+    }
+
+    .alert .date {
+        margin-left: auto; /* Align date to the right */
     }
 }
 
+/* Small tablets and large phones (768px and smaller) */
 @media screen and (max-width: 768px) {
     #left_panel {
-        width: 30%;
+        width: 30%; /* Reduce left panel width */
+    }
+
+    #right_panel {
+        margin-left: 30%;
+    }
+
+    /*patient homepage @media start here */
+    .booking-title {
+        font-size: 1.1rem; /* Slightly smaller font size */
+        margin-left: -50px; /* Adjust alignment */
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .step h4 {
+        font-size: 0.6rem; /* Adjust heading font size */
+    }
+
+    .step p {
+        font-size: 0.5rem; /* Adjust paragraph font size */
+    }
+
+    .search-container{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .search-button{
+        margin-top: 10px;
+    }
+
+    .search-input {
+        width: 200px;
+    }
+    
+    /*notifcation @media start here*/
+    .notification-container {
+        flex-direction: column; /* Stack vertically */
+        height: auto; /* Allow height to adjust dynamically */
+        gap: 8px; /* Reduce gap between elements */
+    }
+
+    .notification-image {
+        width: 70px;
+        height: 70px; /* Scale down images */
+    }
+
+    .sign_icon {
+        width: 30px; /* Further reduce size */
+        height: 30px;
+        margin-top: 15px; /* Adjust top margin */
+        margin-left: 15px; /* Adjust left margin */
+    }
+
+    .alert h2 {
+        font-size: 1.25rem; /* Further scale down headline */
+    }
+
+    .alert p {
+        font-size: 0.8rem;
+    }
+
+    .alert .date {
+        font-size: 0.75rem; /* Adjust date size */
+        margin-left: auto;
     }
 }
 
+/* Mobile screens (480px and smaller) */
 @media screen and (max-width: 480px) {
     #left_panel {
-        width: 50%;
+        width: 100%; /* Full-width left panel */
+        position: relative;
+        height: auto;
+    }
+
+    #right_panel {
+        margin-left: 0;
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    #header {
+        flex-wrap: wrap; /* Allow header content to wrap */
+        height: auto;
+        justify-content: center; /* Center-align content */
+    }
+
+    /*patient homepage @media start here */
+    .booking-title {
+        font-size: 1.1rem; /* Slightly smaller font size */
+        margin-left: -50px; /* Adjust alignment */
+        text-align: left;
+        padding-left: 60px;
+    }
+
+    .step h4 {
+        font-size: 0.5rem; /* Adjust heading font size */
+    }
+
+    .step p {
+        font-size: 0.4rem; /* Adjust paragraph font size */
+    }
+    .search-container{
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+    }
+
+    .search-button{
+        margin-top: 5px;
+    }
+
+    .search-input {
+        width: 50px;
+    }
+    /*notifcation @media start here*/
+    .notification-container {
+        padding: 8px;
+        flex-direction: column; /* Stack vertically */
+        align-items: center; /* Center-align elements */
+    }
+
+    .notification-image {
+        width: 60px;
+        height: 60px; /* Smaller image size */
+    }
+
+    .notification-wrapper {
+        gap: 5px; /* Reduce gap between notifications */
+    }
+    .sign_icon {
+        width: 20px; /* Small size for mobile */
+        height: 20px;
+        margin-top: 10px; /* Minimal top margin */
+        margin-left: 10px; /* Minimal left margin */
+    }
+    .alert h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .alert p {
+        font-size: 0.75rem;
+        text-align: center;
+    }
+
+    .alert .date {
+        font-size: 0.7rem;
+        text-align: center;
     }
 }
