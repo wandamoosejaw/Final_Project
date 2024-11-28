@@ -467,7 +467,7 @@ body {
 }
 
 .notification-container{
-    display: inline-block;
+    display: flex;
     align-items: center;
     background: white;
     padding: 12px;
@@ -604,6 +604,8 @@ body {
     margin-right: 30px;
 }
 /*To-do @media for medical*/
+
+
 /* Media Queries */
 /* Tablet screens (1024px and smaller) */
 @media screen and (max-width: 1024px) {
