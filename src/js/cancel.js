@@ -1,6 +1,6 @@
 // Open Modal
-function openModal() { // Fix function name to match what is used in the HTML
-    document.getElementById('cancelModal').style.display = 'block';
+function openModal() {
+    document.getElementById('cancelModal').style.display = 'flex'; // Ensure it uses flex to center
 }
 
 // Close Modal

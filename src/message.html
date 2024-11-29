@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/patientstyle.css">
-    <title>Medical Records</title>
+    <title>Appointment</title>
 </head>
 <body> 
     <!-- main div -->   
@@ -35,7 +35,7 @@
                 </a>
             </label>
             <label>
-                <a href="message.html">
+                <a href="#">
                     <img src="icons/patient/message_icon.png" alt="Messages"> Messages
                 </a>
             </label>
@@ -45,30 +45,39 @@
                 </a>
             </label>
         </div>
-        
-        
 
         <!-- this div where the rigth panel located and the other feature-->
         <div id="right_panel">
 
             <!--this for header where the profile icon located----->
-            <div class="header-record">
-                <div class="info-file">
-                    <a class="info-a"href="record.html"><img src="/src/icons/patient/left-arrow.png" alt=""></a>
-                    <p class="name-record">X-Ray from Laboratory</p>                
+            <div id="header">
+                <div id="info" style="text-align: left;">
+                    <p id="fullname">Carlos Sainz</p>
+                    <p id="status">Patient</p>
                 </div>
-                </div>
-                
-                <div class="pdf-files">
-                    <embed class="files" src="/src/pdf/Xray.pdf" type="application/pdf">
-                </div>
-            </div>           
-        </div>
-            
+                <img id="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
+            </div>
 
+            <div class="greetings">
+                <h3>Messages</h3>
+            </div>
+
+            <div class="search-container">
+                <div class="search-field">
+                    <img src="icons/patient/search_icon.png" alt="Search Icon" class="search-icon" width="20" height="20">
+                    <input type="text" class="search-input" placeholder="Search Recipient">
+                </div>
+                <button class="search-button">Search</button>
+            </div>
+
+            <div class="message-wrapper">
+                <div class="message-contaienr">
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
 
     </div>   
 </body>
 </html>
-
-

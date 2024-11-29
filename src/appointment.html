@@ -35,7 +35,7 @@
                 </a>
             </label>
             <label>
-                <a href="#">
+                <a href="message.html">
                     <img src="icons/patient/message_icon.png" alt="Messages"> Messages
                 </a>
             </label>
@@ -147,26 +147,9 @@
                     </div>
                 </div>
 
+                <script src="/src/js/cancel.js"></script> <!-- Link to your JavaScript file -->
+
             </div>
     </div>   
 </body>
 </html>
-
-<script>
-    // Open Modal
-    function openModal() {
-        document.getElementById('cancelModal').style.display = 'flex'; // Ensure it uses flex to center
-    }
-
-    // Close Modal
-    function closeModal() {
-        document.getElementById('cancelModal').style.display = 'none';
-    }
-
-    // Handle Submission
-    function submitCancel() {
-        alert("Your cancellation request has been submitted.");
-        closeModal();
-    }
-
-</script>
