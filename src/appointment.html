@@ -89,15 +89,84 @@
                     <div class="appointment-reasons">
                         <strong>Reason for Booking the Appointment:</strong><p>I am seeking an orthodontic evaluation because I have concerns about my misaligned teeth and a noticeable overbite.</p>
                     </div>
+                    <div class="appointment-footer">
+                        <div class="appointment-actions">
+                            <button class="appointment-cancel" onclick="openModal()">CANCEL</button>
+                            <button class="appointment-pending">PENDING</button>
+                            <button class="appointment-completed">COMPLETED</button>
+                        </div>
+                        <div class="appointment-date-requested">
+                            <p><strong>Date Requested:</strong> August 23, 2024</p>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="appointment-container">
+                    <h2 class="appointment-title">Request for Appointment</h2>
+                    <div class="appointment-info">
+                        <strong>Patient:</strong><p>Juan Dela Cruz</p>
+                        <strong>Date:</strong><p>August 29, 2024</p>
+                    </div>
+                    <div class="appointment-info">
+                        <strong>Doctor:</strong><p>Dr. Kelly M. Oliaves</p>
+                        <strong>Time:</strong><p>11:00 AM - 12:00 PM</p>
+                    </div>
+                    <div class="appointment-info">
+                        <strong>Payment:</strong><p>HMO</p>
+                        <strong>Payment:</strong><p>Completed</p>
+                    </div>
+                    <div class="appointment-reasons">
+                        <strong>Reason for Booking the Appointment:</strong><p>My tooth aches</p>
+                    </div>
+                    <div class="appointment-footer">
+                        <div class="appointment-actions">
+                            <button class="appointment-cancel"  onclick="openModal()">CANCEL</button>
+                            <button class="appointment-pending">PENDING</button>
+                            <button class="appointment-completed">COMPLETED</button>
+                        </div>
+                        <div class="appointment-date-requested">
+                            <p><strong>Date Requested:</strong> August 23, 2024</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal for Cancel Appointment -->
+                <div id="cancelModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&larr; Return</span>
+                        <h2>Cancel Appointment</h2>
+                        <p>Reason for Cancelling</p>
+                        <form>
+                            <label><input type="radio" name="reason" value="personal"> Personal Reasons</label><br>
+                            <label><input type="radio" name="reason" value="transportation"> Transportation Issues</label><br>
+                            <label><input type="radio" name="reason" value="work"> Work-related Issues</label><br>
+                            <label><input type="radio" name="reason" value="change_of_mind"> Change of Mind</label><br>
+                            <textarea placeholder="Add more details..."></textarea><br>
+                            <button type="button" onclick="submitCancel()">CONFIRM</button>
+                        </form>
+                    </div>
+                </div>
+
             </div>
-
-            
-
-        </div>
-
     </div>   
 </body>
 </html>
 
+<script>
+    // Open Modal
+    function openModal() {
+        document.getElementById('cancelModal').style.display = 'flex'; // Ensure it uses flex to center
+    }
 
+    // Close Modal
+    function closeModal() {
+        document.getElementById('cancelModal').style.display = 'none';
+    }
+
+    // Handle Submission
+    function submitCancel() {
+        alert("Your cancellation request has been submitted.");
+        closeModal();
+    }
+
+</script>
