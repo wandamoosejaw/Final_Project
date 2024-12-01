@@ -671,6 +671,50 @@ body {
 }
 
 /*appointment style css start here*/
+.appointment-p{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(205, 106, 48);
+    margin-left: 10px;
+}
+.appointment-search-wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.appointment-search-field {
+    position: relative;
+    margin-right: 10px;
+}
+.appointment-search-input {
+    padding: 15px;
+    padding-left: 40px; /* Space for the image */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 600px;
+    color: #666;
+    margin-left: -10px;
+}
+.appointment-search-button {
+    padding: 10px 50px;
+    border: none;
+    background-color: #2c4964;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.appointment-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
 .appointment-wrapper {
   display: inline-block;
   justify-content: center;
@@ -723,6 +767,7 @@ body {
 }
 
 /* Action Buttons */
+
 .appointment-actions {
     display: flex;
     gap: 10px;
@@ -886,7 +931,57 @@ body {
 }
 /*message css start here*/
 
-.message-wrapper{
+.message-p {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(205, 106, 48);
+    margin-left: 20px;
+}
+
+.message-search-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.message-search-field {
+    position: relative;
+    margin-right: 10px;
+}
+
+.message-search-input {
+    padding: 15px;
+    padding-left: 40px; /* Space for the image */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 550px; /* Ensure it takes full width of its parent */
+    color: #666;
+    margin-left: -10px;
+}
+
+.message-search-button {
+    padding: 10px 50px;
+    border: none;
+    background-color: #2c4964;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    float: right;
+}
+
+.message-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.message-wrapper {
     display: inline-block;
     gap: 10px;
     margin-top: 10px;
@@ -896,44 +991,45 @@ body {
     padding: 10px;
     text-decoration: none;
     overflow-y: auto;
+}
 
-
- }
-  
- .message-contaienr{
+.message-contaienr {
     display: flex;
     align-items: center;
     padding: 12px;
     width: 98%;
-    height: 150px; 
+    height: 150px;
     gap: 12px;
     border: 1px solid #cfd9de;
     box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
     margin-bottom: 10px;
     margin-left: 15px;
     text-decoration: none;
+}
 
- }
- 
- .doctor-details{
-     color: #000;
- }
- 
- .message-wrapper a{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding-bottom: 10px;
-     margin-bottom: 15px;
-     padding-right: 15px;
- }
- 
- .message-wrapper a:last-child{
-     margin-bottom: 0;
- 
- }
- 
- .message-wrapper a .status-dot {
+.doctor-details {
+    color: #000;
+    text-decoration: none;
+}
+
+.message-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+
+}
+
+.message-wrapper a:last-child {
+    margin-bottom: 0;
+    text-decoration: none;
+
+}
+
+.message-wrapper a .status-dot {
     background: #1a3a56;
     height: 12px;
     width: 12px;
@@ -942,11 +1038,13 @@ body {
     margin-right: 20px;
     margin-top: -45px;
     float: right;
+    text-decoration: none;
+
 }
 
- .message-wrappers a .status-dot.offline{
-     background: #ccc;
- }
+.message-wrappers a .status-dot.offline {
+    background: #ccc;
+}
 
 /* chat style css start here*/
 .chat-area {
@@ -1162,12 +1260,7 @@ body {
     pointer-events: auto; /* Enable pointer events */
 }
 
-/*To-do @media for medical & pdf file*/
 /*To-do @media for doctor*/
-/*To-do @media for appointment & appointment booking*/
-/*To-do @media for appointments statu*/
-/*To-do @media for message*/
-
 
 /* Media Queries */
 /* Tablet screens (1024px and smaller) */
@@ -1181,7 +1274,7 @@ body {
     }
 
     #header {
-        justify-content: flex-start; /* Align header content to the left */
+        justify-content: flex-end; /* Align header content to the left */
     }
 
     /*patient homepage @media start here */
@@ -1217,6 +1310,10 @@ body {
     }
 
     /*notifcation @media start here*/
+    .notfication-p{
+        font-size: 2rem;
+
+    }
     .notification-wrapper {
         padding: 10px;
     }
@@ -1263,7 +1360,7 @@ body {
     .medical-search-wrapper {
         padding: 10px;
         margin-bottom: 15px;
-        margin-top: 15px;
+        margin-top: 10px;
     }
     .medical-search-field {
         height: auto; /* Adjust for variable content */
@@ -1272,12 +1369,70 @@ body {
         margin-right: 8px;
     }
     .medical-search-input {
-        width: 200px;
+        width: 550px;
     }
     .medical-search-button {
         padding: 8px 40px;
     }
+    .medical-container {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+    .medical-container img {
+        margin-left: 20px;
+    }
+    .medical-description {
+        display: space-between;
+        margin: 10px;
+    }
+    .medical-container h2 {
+        color: #2c4964;
+        margin-bottom: 5px;
+    }
+    .medical-container p {
+        font-size: 0.8em;
+    }
+    /*record file @media start here */
+    .medical-view {
+        margin-left: auto;
+        margin-right: 20px;
+    }
+    .name-record {
+        margin-left: 50px;
+        font-size: 30px;
+    }
+    /*appointment @media start here*/
+    .appointment-p{
+        font-size: 2.5rem;
+    }
+    .appointment-search-input {
+        width: 540px;
 
+    }
+
+    /*message @media start here*/
+    
+    .message-wrapper {
+        position: relative; /* Ensure the parent has a relative position */
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .message-contaienr {
+        width: 90%;
+        margin-left: 10px;
+    }
+    .message-wrapper h2{
+        font-size: 20px;
+    }
+
+    .message-wrapper p{
+        font-size: 10px;
+    }
+
+
+    
 }
 
 /* Small tablets and large phones (768px and smaller) */
@@ -1321,6 +1476,12 @@ body {
     }
     
     /*notifcation @media start here*/
+    .notification-p{
+        margin-top: 20px;
+        font-size: 2rem;
+        margin-left: 10px;
+    }
+
     .notification-container {
         flex-direction: column; /* Stack vertically */
         height: auto; /* Allow height to adjust dynamically */
@@ -1353,11 +1514,11 @@ body {
     }
 
     /*medical records @media start here*/
-    .record-p{
+    .record-p {
         margin-top: 20px;
         font-size: 2rem;
     }
-    
+
     .medical-search-wrapper {
         padding: 10px;
         margin-bottom: 15px;
@@ -1370,12 +1531,126 @@ body {
         margin-right: 6px;
     }
     .medical-search-input {
-        width: 100px;
+        width: 175px;
     }
     .medical-search-button {
         padding: 6px 30px;
+    }
+    .medical-container {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .medical-container img {
+        margin-left: 15px;
+    }
+
+    .medical-description {
+        display: space-between;
+        margin: 5px;
+    }
+
+    .medical-container h2 {
+        color: #2c4964;
+        margin-bottom: 5px;
+    }
+
+    .medical-container p {
+        font-size: 0.8em;
+    }
+
+    /*record file @media start here */
+    .medical-view {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .name-record {
+        margin-left: 45px;
+        font-size: 20px;
+    }
+
+    /*appointment @media start here*/
+    .appointment-p{
+        font-size: 2.0rem;
+    }
+    .appointment-search-input {
+        width: 130px;
 
     }
+    .appointment-info {
+        flex-direction: column; /* Stack items vertically */
+        width: 100%; /* Adjust width */
+        margin: 10px 0; /* Reduce margins */
+        gap: 10px; /* Adjust spacing */
+    }
+
+    .appointment-info strong {
+        width: auto; /* Allow text to flow */
+    }
+
+    .appointment-reasons {
+        width: 100%; /* Full width */
+        margin: 10px; /* Adjust spacing */
+    }
+
+    .appointment-footer {
+        float: none; /* Align naturally */
+        text-align: center; /* Center align footer */
+        position: static; /* Remove positioning */
+        margin-top: 20px; /* Add spacing above */
+    }
+
+    .appointment-actions {
+        flex-direction: column; /* Stack buttons */
+        gap: 15px; /* Adjust spacing */
+        align-items: center; /* Center align buttons */
+    }
+
+    .appointment-actions button {
+        width: 100%; /* Full-width buttons */
+        text-align: center; /* Center align text */
+    }
+
+    /*message @media start here*/
+    .message-p{
+        font-size: 2rem;
+    }
+    .message-search-wrapper {
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .message-search-field {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+    .message-search-input {
+        width: 105px;
+    }
+
+
+    .message-wrapper {
+        position: relative; /* Ensure the parent has a relative position */
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .message-contaienr {
+        width: 95%;
+        margin-left: 10px;
+    }
+    .message-wrapper h2{
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    .message-wrapper p{
+        font-size: 15px;
+    }
+
+   
 }
 
 /* Mobile screens (480px and smaller) */
@@ -1389,6 +1664,7 @@ body {
     #right_panel {
         margin-left: 0;
         padding: 10px; /* Reduce padding for smaller screens */
+        justify-content: flex-end;
     }
 
     #header {
@@ -1426,6 +1702,11 @@ body {
         width: 50px;
     }
     /*notifcation @media start here*/
+    .record-p{
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+
     .notification-container {
         padding: 8px;
         flex-direction: column; /* Stack vertically */
@@ -1461,28 +1742,151 @@ body {
         text-align: center;
     }
 
-        /*medical records @media start here*/
-        .record-p{
-            margin-top: 20px;
-            font-size: 2rem;
-        }
-        
-        .medical-search-container {
-            padding: 5px;
-            margin-bottom: 10px;
-            margin-top: 10px;
-        }
-        .medical-search-field {
-            height: auto; /* Adjust for variable content */
-            flex-direction: column; /* Stack items vertically */
-            align-items: flex-start;
-            margin-right: 4px;
-        }
-        .medical-search-input {
-            width: 50px;
-        }
-        .medical-search-button {
-            padding: 4px 20px;
+    /*medical records @media start here*/
+    .record-p {
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+    .medical-search-wrapper {
+        padding: 10px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
 
-        }
+    .medical-search-container {
+        padding: 5px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .medical-search-field {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+        margin-right: 4px;
+        width: 100%; /* Set the width */
+    }
+
+    .medical-search-input {
+        width: 100px;
+    }
+
+    .medical-search-button {
+        padding: 4px 20px;
+    }
+
+    .medical-container {
+        height: auto; /* Adjust for variable content */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    .medical-container img {
+        width: 30px;
+        height: 30px;
+    }
+
+    /*record file @media start here */
+    .medical-view {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .name-record {
+        margin-left: 40px;
+        font-size: 15px;
+    }
+    /*appointment @media start*/
+    .appointment-p{
+        font-size: 1.0rem;
+    }
+    .appointment-search-input {
+        width: 100px;
+    
+    }
+
+    .appointment-search-button {
+        width: 100%; /* Full width */
+        padding: 10px; /* Adjust padding */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .appointment-wrapper {
+        padding: 10px; /* Reduce padding */
+    }
+
+    .appointment-container {
+        padding: 10px; /* Reduce inner padding */
+        margin: 5px; /* Narrow margin */
+        width: 100%; /* Full width */
+    }
+
+    .appointment-info {
+        margin: 5px 0; /* Narrow margin */
+        gap: 5px; /* Reduce gap */
+    }
+
+    .appointment-info strong {
+        font-size: 0.8rem; /* Reduce font size */
+    }
+
+    .appointment-info p {
+        font-size: 0.8rem; /* Reduce font size */
+    }
+
+    .appointment-reasons {
+        width: 100%; /* Full width */
+        margin: 5px 0; /* Narrow margin */
+    }
+
+    .appointment-reasons p {
+        font-size: 0.8rem; /* Reduce font size */
+        padding-top: 5px; /* Adjust spacing */
+    }
+
+    .appointment-footer {
+        text-align: center; /* Center align */
+        margin-top: 10px; /* Add spacing above */
+    }
+
+    .appointment-actions {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Narrow gap */
+    }
+
+    .appointment-actions button {
+        font-size: 0.8rem; /* Smaller font size */
+        padding: 6px 10px; /* Adjust padding */
+    }
+
+    .appointment-cancel {
+        font-size: 0.8rem; /* Reduce text size */
+    }
+
+    .appointment-pending {
+        font-size: 0.8rem; /* Reduce text size */
+    }
+
+    .appointment-completed {
+        font-size: 0.8rem; /* Reduce text size */
+    }
+
+    /*message @media start here*/
+    .message-search-button{
+        margin-right: 100px;
+    }
+
+    .message-wrapper {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .message-contaienr {
+        width: 98%;
+    }
+
+    .message-wrapper h2{
+        font-size: 15px;
+    }
+
 }
