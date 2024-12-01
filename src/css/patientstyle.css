@@ -1,13 +1,19 @@
 /* General Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scrollbar-color: #335271 #FFFFFF;
+
 }
+
+
 
 body {
     font-family: Arial, sans-serif;
 }
+
 
 /* Wrapper */
 #wrapper {
@@ -1890,3 +1896,4 @@ body {
     }
 
 }
+
