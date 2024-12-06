@@ -524,6 +524,48 @@ body {
 .alert .date{
     margin-left: 90%;
 }
+/*Browse style start here*/
+.message-wrapper {
+    display: inline-block;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    min-height: 100%;
+    padding: 10px;
+    text-decoration: none;
+    overflow-y: auto;
+}
+
+.browse-contaienr {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    width: 98%;
+    height: 150px;
+    gap: 12px;
+    border: 1px solid #cfd9de;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
+    margin-bottom: 10px;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.browse-doctor-details {
+    color: #000;
+    text-decoration: none;
+}
+
+.browse-wrapper a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    text-decoration: none;
+
+}
 
 /*Medical record style css start here*/
 
