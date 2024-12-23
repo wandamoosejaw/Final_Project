@@ -1310,6 +1310,228 @@ body {
 
 /*To-do @media for doctor*/
 
+/*Browser modal*/
+.modal-doctor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content-doctor {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.doctor-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.doctor-image-content {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.doctor-info h2 {
+    color: #1e3a8a;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.specialty {
+    color: #666;
+    margin: 0 0 1rem 0;
+}
+
+.book-btn {
+    background-color: #f97316;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    background-color: #ea580c;
+}
+
+.doctor-description {
+    margin-bottom: 2rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.contact-section, .working-hours {
+    margin-bottom: 2rem;
+}
+
+.contact-section h3, .working-hours h3 {
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info a {
+    color: #666;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #1e3a8a;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.schedule-item {
+    background-color: #f3f4f6;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.schedule-item.today {
+    background-color: #dbeafe;
+}
+
+.schedule-item h4 {
+    margin: 0 0 0.5rem 0;
+    color: #444;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+
+/* Add these new styles */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.back-btn:hover {
+    color: #1e3a8a;
+}
+
+.back-arrow {
+    font-size: 1.2rem;
+}
+
+.close-btn {
+    position: static; /
+}
+
+
+.appointment-form h2 {
+    margin-top: 0.5rem;
+}
+
+.appointment-form {
+    max-width: 1000px;
+}
+
+.appointment-form h2 {
+    color: #1e3a8a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input[readonly] {
+    background-color: #f3f4f6;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.1);
+}
+
+.doctor-image-content {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
 /* Media Queries */
 /* Tablet screens (1024px and smaller) */
 @media screen and (max-width: 1024px) {
