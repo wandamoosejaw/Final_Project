@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-color: #335271 #FFFFFF;
+    scrollbar-color: #0085AA #FFFFFF;
 
 }
 
@@ -29,7 +29,7 @@ body {
     left: 0;
     width: 15%; /* Default width */
     height: 100vh; /* Full viewport height */
-    background-color: #2c4964; /* Dark blue */
+    background-color: #0085AA; /* Dark blue */
     color: white;
     display: flex;
     flex-direction: column;
@@ -50,15 +50,14 @@ body {
     width: 100%;
 }
 
-/* Navigation Labels */
-#left_panel label a{
-    width: 100%;
+#left_panel label a {
+    width: 230%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Align icons and text to the left */
     font-size: 16px;
-    background-color: #2c4964;
+    background-color: #0085AA;
     cursor: pointer;
     padding-left: 20px; /* Add padding for alignment */
     transition: background-color 0.2s ease;
@@ -66,8 +65,8 @@ body {
     text-decoration: none; /* Removes the underline */
 }
 
-#left_panel label:hover {
-    background-color: #365b82; /* Hover effect */
+#left_panel label a:hover {
+    background-color: #35C3A3; /* Hover effect */
 }
 
 #left_panel label img {
@@ -173,7 +172,7 @@ body {
     left: 12%; /* Add space from left */
     right: 12%; /* Add space from right */
     height: 4px;
-    background-color: #2c4964;
+    background-color: #0085AA;
     z-index: 1;
 }
 
@@ -195,7 +194,7 @@ body {
 .circle {
     width: 40px;
     height: 40px;
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border-radius: 50%;
     display: flex;
@@ -243,7 +242,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
     padding: 50px 70px; /* Adjusted padding for better text placement */
-    background: linear-gradient(to right, #2c4964, #365b82); /* Gradient background */
+    background: linear-gradient(to right, #0085AA, #0085AA); /* Gradient background */
     position: relative;
     overflow: hidden;
 }
@@ -257,7 +256,7 @@ body {
     margin-top: px;
     margin-bottom: 10px;
     padding: 50px 40px ; /* Adjusted padding to move text left */
-    background: linear-gradient(to right, #2c4964, #365b82); /* Gradient background */
+    background: linear-gradient(to right, #006688, #2E4A62); /* Gradient background */
     position: relative;
     overflow: hidden;
 }
@@ -328,7 +327,7 @@ body {
 .search-button {
     padding: 10px 50px;
     border: none;
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -362,7 +361,7 @@ body {
 
 /* Hover effect for labels */
 .search-by .label:hover {
-    background-color: #2c4964; /* Light gray background on hover */
+    background-color: #0085AA; /* Light gray background on hover */
 }
 
 .search-by p{
@@ -380,7 +379,7 @@ body {
 
 .text-container h3{
     font-size: 1.5rem;
-    color: #2c4964;
+    color: #0085AA;
     margin-left: -10px;
 }
 
@@ -493,7 +492,7 @@ body {
     border-radius: 50px;
     align-items: center;
     justify-content: center;
-    border: 1px solid  #2c4964;
+    border: 1px solid  #0085AA;
     box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
 
 
@@ -512,7 +511,7 @@ body {
     width: 100%;
 }
 .alert h2{
-    color: #2c4964;
+    color: #0085AA;
     margin-bottom: 10px;
     font-size: 2rem;
 }
@@ -599,7 +598,7 @@ body {
 .medical-search-button {
     padding: 10px 50px;
     border: none;
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -638,7 +637,7 @@ body {
 }
 
 .medical-container h2{
-    color: #2c4964;
+    color: #0085AA;
     margin-top: px;
     margin-bottom: 5px;
 }
@@ -749,7 +748,7 @@ body {
 .appointment-search-button {
     padding: 10px 50px;
     border: none;
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -789,6 +788,10 @@ body {
     margin: 20px;
 }
  
+.appointment-title{
+    color: #0085AA;
+}
+
 .appointment-info strong{
     width: 50px;
 }
@@ -867,7 +870,7 @@ body {
 
 /* Completed Button */
 .appointment-completed {
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border: none;
 }
@@ -900,7 +903,7 @@ body {
 
 .modal-content h2 {
     margin-bottom: 20px;
-    color: #2c4964; /* Match the blue-gray text color */
+    color: #0085AA; /* Match the blue-gray text color */
     font-family: 'Arial', sans-serif; /* Ensure the font family matches */
     font-weight: bold;
     font-size: 2rem; /* Increase size for a bold heading */
@@ -912,7 +915,7 @@ body {
 .modal-content p {
     font-size: 1.2rem; /* Adjust for larger text */
     margin-bottom: 15px;
-    color: #2c4964; /* Match the blue-gray text color */
+    color: #0085AA; /* Match the blue-gray text color */
     font-weight: bold; /* Make it stand out */
     text-align: left;
     padding-left: 50px;
@@ -921,7 +924,7 @@ body {
 
 .modal-content label {
     font-size: 1.1rem; /* Adjust size for radio button labels */
-    color: #2c4964; /* Match the blue-gray color */
+    color: #0085AA; /* Match the blue-gray color */
     display: flex; /* Align text with radio buttons */
     align-items: center;
     margin-bottom: 5px; /* Add spacing between options */
@@ -931,7 +934,7 @@ body {
 
 .modal-content label input[type="radio"] {
     margin-right: 10px; /* Space between radio button and text */
-    accent-color: #2c4964; /* Blue-gray for the radio button */
+    accent-color: #0085AA; /* Blue-gray for the radio button */
     transform: scale(1.2); /* Enlarge the radio button */
     padding-left: 30px;
 
@@ -947,11 +950,11 @@ body {
     padding: 10px;
     font-size: 1rem;
     background-color: #f8fcff; /* Slight light blue background */
-    color: #2c4964; /* Text color */
+    color: #0085AA; /* Text color */
 }
 
 .modal-content button {
-    background-color: #2c4964; /* Match the dark blue color */
+    background-color: #0085AA; /* Match the dark blue color */
     color: white;
     padding: 10px 30px; /* Increase padding for a larger button */
     border: none;
@@ -970,7 +973,7 @@ body {
 
 .modal-content .close {
     font-size: 1rem;
-    color: #2c4964; /* Match the blue-gray text color */
+    color: #0085AA; /* Match the blue-gray text color */
     cursor: pointer;
     display: block;
     text-align: left;
@@ -1013,7 +1016,7 @@ body {
 .message-search-button {
     padding: 10px 50px;
     border: none;
-    background-color: #2c4964;
+    background-color: #0085AA;
     color: white;
     border-radius: 25px;
     cursor: pointer;
@@ -1078,7 +1081,7 @@ body {
 }
 
 .message-wrapper a .status-dot {
-    background: #1a3a56;
+    background: #0085AA;
     height: 12px;
     width: 12px;
     border-radius: 50%;
@@ -1106,7 +1109,7 @@ body {
     display: flex;
     align-items: center;
     padding: 18px 30px;
-    background: #2c3e50;
+    background: #0085AA;
     color: white;
     font-size: 18px;
 }
@@ -1301,7 +1304,7 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    background: #2c3e50; /* Change this to your desired color */
+    background: #0085AA; /* Change this to your desired color */
     color: white; /* Ensure the text color contrasts with the background */
     border: none; /* Remove any border if not needed */
     opacity: 1; /* Ensure full opacity */
