@@ -13,7 +13,7 @@ body {
 
 /* Header styles */
 .header {
-    background-color: #335271;
+    background-color: #0085AA;
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -77,8 +77,8 @@ body {
 }
 
 .tabs a.active {
-    color: #335271;
-    border-bottom: 2px solid #335271;
+    color: #0085AA;
+    border-bottom: 2px solid #0085AA;
 }
 
 .alert{
@@ -134,7 +134,7 @@ label {
 
 .box:focus {
     outline: none;
-    border-color: #335271;
+    border-color: #0085AA;
     background-color: white;
 }
 
@@ -143,7 +143,7 @@ label {
 .btn {
     width: 180px;  /* Fixed width */
     padding: 0.75rem;
-    background-color: #335271;
+    background-color: #0085AA;
     color: white;
     border: none;
     border-radius: 50px;  /* Rounded corners */
@@ -175,7 +175,7 @@ label {
 }
 
 .footer-links a:hover {
-    color: #335271;
+    color: #0085AA;
 }
 
 /* Responsive adjustments */
