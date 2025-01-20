@@ -1,6 +1,9 @@
 
 body {
     font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* Logo */
@@ -47,6 +50,8 @@ body {
     font-size: 16px;
     background-color: #0085AA;
     cursor: pointer;
+    height: 54px;
+    width: 291px;
     padding-left: 20px; /* Add padding for alignment */
     transition: background-color 0.2s ease;
     color: white;
@@ -82,7 +87,7 @@ body {
 
 /* Header */
 #header {
-    position: sticky;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -93,6 +98,7 @@ body {
     padding-bottom: 17px;
     margin-left: 0;
     width: 100%;
+    
 }
 
 /* Info Section */
@@ -218,7 +224,7 @@ body {
 }
 
 .demographics {
-    display: flex;
+    
     background-color: #FFFFFF;
     width: 290px;
     height: 278px;
@@ -234,8 +240,25 @@ body {
     font-size: 24px;
     font-weight: bold;
     margin: 0;
+    margin-bottom: 15px;
 }
 
+.toprank {
+    display: flex;
+    margin-left: 13px;
+}
+
+.topnumrank {
+    color: #1E1E1E;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.topitemsranked {
+    color: #1E1E1E;
+    font-size: 14px;
+    margin-left: 15px;
+}
 
 
 
