@@ -3,6 +3,66 @@
 
 // **********PATIENT MODULE ****************************************************************************************
 
+
+//DASHBOARD
+
+
+//Payment Type Distribution Pie Chart
+new Chart(document.getElementById('piec_paymenttype'), {
+    type: 'pie',
+    data: {
+        labels: ['HMO', 'Cash on-site', 'Online Payment'],
+        datasets: [{
+            label: 'Payment Type',
+            data: [20, 40, 40],
+            backgroundColor: [
+                'rgba(53, 195, 100, 0.9)',
+                'rgba(0, 133, 170, 0.9)',
+                'rgba(205, 106, 48, 0.9)'
+            ]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        title: {
+            display: true,
+            text: 'Payment Type Distribution Pie Chart'
+        },
+        legend: {
+            display: true,
+            position: 'right',
+            labels: {
+                boxWidth: 20,
+                padding: 10,
+                usePointStyle: true // Optional, makes the legend items use a circular marker
+            },
+            reverse: true // Makes the order of the labels appear from top to bottom
+        }
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Autocomplete Search Box
 // Autocomplete Search Box
 let availableSearchKeys = [
@@ -12,9 +72,13 @@ let availableSearchKeys = [
     'address',
     'city',
     'state',
+    'person',
+    'setting',
+    'date',
+    'caliber'
 ]; // list of keywords available
 
-const resultBox = document.querySelector(".result-box"); // selects the class result-box
+const resultBox = document.querySelector(".result_box"); // selects the class result-box
 const inputBox = document.getElementById("input-box"); // selects the id input-box
 
 inputBox.addEventListener("keyup", function () { // onkeyup event is fired when a key is released

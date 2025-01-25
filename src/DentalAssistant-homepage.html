@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/dentalassistantstyle.css">
     <title>Dental Assistant - Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
@@ -92,6 +94,10 @@
                         </div>
                         <div class="distribution"> <!-- Chart-->
                             <h3> Weekly Appointment Distribution</h3>
+                            <div class="barchart_container">
+                                <canvas id="weekly-appointment-chart"></canvas> <!-- Canvas element for the chart -->
+                            </div>
+                            
                         </div>
                         <div class="piecharts">
                             <div class="demographics">
@@ -117,6 +123,9 @@
                             </div>
                             <div class="demographics">
                                 <h3>Payment Type Distribution</h3>
+                                <div class="piechart_container">
+                                    <canvas id="piec_paymenttype" height="200"></canvas>
+                                </div>
                             </div>
                             <div class="demographics">
                                 <h3>Patient Age demographics</h3>
@@ -205,5 +214,9 @@
                 </div>
 
                 </div>
+
+<!---Link to JS---->
+<script src="js/dental_assistant.js"></script>
                 
 </body>
+</html>

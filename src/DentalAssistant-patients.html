@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Link to CSS-->
     <link rel="stylesheet" href="css/dentalassistantstyle.css">
-    <!-- Link to JS-->
-    <script src="js/dental_assistant.js"></script>
     <title>Dental Assistant - Patients</title>
      <!-- icon: search, like-->
      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -86,20 +84,66 @@
                     
                     <button id="search_btn">  SEARCH</button>
 
-                    <button id = "filter_btn"> FILTER</button>
                     
                     <div class="filter_group">
 
                     </div>    
                 </div>
                 
-                    
+             <table class="patient_table">
+
+                <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Sex</th>
+                    <th>Age</th>
+                    <th>Contact Details</th>
+                    <th>Recent Procedure</th>
+                    <th>Attending Physician</th>
+                    <th>Actions</th>
+                </tr>
+                <tr>
+                    <td>PAT00123</td>
+                    <td>Amanda R. Flores</td>
+                    <td class="cell_center_content">F</td>
+                    <td class="cell_center_content">25</td>
+                    <td class="cell_center_content" >09123456789</td>
+                    <td>Root Canal</td>
+                    <td>Dr. John Doe</td>
+                    <td class="cell_center_content">
+                        <button class="view_btn">
+                            <span class="material-symbols-outlined">
+                            visibility
+                            </span> 
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PAT00124</td>
+                    <td>Brian K. Tan</td>
+                    <td class="cell_center_content">M</td>
+                    <td class="cell_center_content">35</td>
+                    <td class="cell_center_content">09123456789</td>
+                    <td>Dental Cleaning</td>
+                    <td>Dr. Jane Doe</td>
+                    <td class="cell_center_content">
+                        <button class="view_btn">
+                            <span class="material-symbols-outlined">
+                            visibility
+                            </span> 
+                        </button>
+                    </td>
+                </tr>
+
+
+             </table>       
                 
             </div>
 
 
         </div>
     </div>
-    <script src="/js/dental_assistant.js"></script>
+    <!-- Link to JS-->
+    <script src="js/dental_assistant.js"></script>
 </body>
 </html>
