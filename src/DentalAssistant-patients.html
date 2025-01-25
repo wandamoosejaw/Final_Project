@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to CSS-->
     <link rel="stylesheet" href="css/dentalassistantstyle.css">
+    <!-- Link to JS-->
+    <script src="js/dental_assistant.js"></script>
     <title>Dental Assistant - Patients</title>
+     <!-- icon: search, like-->
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body> 
-
     <!-- main div -->   
     <div id="wrapper">
 
@@ -65,15 +69,37 @@
                 </div>
                 <img id="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
             </div>
-
+ 
             <!-- this div where the main content located-->
             <div id="content"> 
                 <h1>Patients</h1>
+                <div class="search_group">
+                    <div class="search_box">
+                        <div class="row">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type = "text" id ="input-box" placeholder="Search patient name or patient ID" autocomplete="off">  
+                        </div>
+                        <div class="result_box">
+                          
+                        </div>
+                    </div>
+                    
+                    <button id="search_btn">  SEARCH</button>
 
+                    <button id = "filter_btn"> FILTER</button>
+                    
+                    <div class="filter_group">
+
+                    </div>    
+                </div>
+                
+                    
+                
             </div>
 
 
         </div>
     </div>
+    <script src="/js/dental_assistant.js"></script>
 </body>
 </html>
