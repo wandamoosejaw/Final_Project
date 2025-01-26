@@ -161,7 +161,23 @@ body {
 
 .data {
     margin-bottom: 20px;
+    
 }
+
+.dateandtime_container {
+    margin-top: -80px;
+    display: flex;
+    gap: 30px;
+    margin-left: 1177px;
+    margin-bottom: -30px;
+    
+}
+
+.date_container, .time_container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+} 
 
 /* Quantities/ KPIs */
 .quantities {
@@ -626,3 +642,108 @@ tr:nth-child(odd)  {  background-color: #fff;}
     background-color: #35C3A3;
 }
 
+
+/* NOTIFICATIONS ----------------------------------------- */
+.notification-p{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(205, 106, 48);
+}
+
+.notification-wrapper{
+    display: inline-block;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    min-height: 100%;
+    padding: 10px;
+    margin-left: 35px;
+    margin-right: 40px;
+
+}
+
+.notification-container{
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px;
+    width: 100%;
+    height: 127px; 
+       gap: 12px;
+    border: 1px solid #cfd9de;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
+    margin-bottom: 10px
+}
+
+.notification-image{
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    background:#EFF8FF;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid  #0085AA;
+    box-shadow: 0 2px 12px rgba(173, 216, 230, 0.5); /* Light blue with 50% transparency */
+
+
+}
+
+.sign_icon {
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.alert{
+    width: 100%;
+}
+.alert h2{
+    padding-top: 22px;
+    color: #0085AA;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.alert p{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.alert .date{
+    margin-left: 90%;
+}
+
+/* APPOINTMENTS ----------------------------------------- */
+
+.sub-navigation {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+
+} 
+
+.sub-navigation a {
+    color:#0085AA;
+    border:0;
+    outline: 0;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration: none;
+
+}
+
+/* Hide sections by default */
+.section {
+    display: none;
+}
+
+/* Class for the visible section */
+.section.active {
+    display: block;
+}
