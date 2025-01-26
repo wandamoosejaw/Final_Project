@@ -747,3 +747,37 @@ tr:nth-child(odd)  {  background-color: #fff;}
 .section.active {
     display: block;
 }
+
+
+
+/* INVENTORY ----------------------------------------- */
+.distribution_inventory {
+    background-color: #FFFFFF;
+    width: 1219px;
+    height: 457px;
+    
+}
+
+.distribution_inventory h3 {
+    padding-top: 20px;
+}
+
+
+
+.demographics_inventory {
+    background-color: white;
+    width: 594px;
+    height: 204px;
+
+}
+
+.demographics_inventory h3, .distribution_inventory h3 {
+    color: #0085AA;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.demographics_inventory p {
+    margin-left: 20px;
+}
