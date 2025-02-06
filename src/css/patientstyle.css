@@ -5,14 +5,10 @@
     margin: 0;
     padding: 0;
     scrollbar-color: #0085AA #FFFFFF;
+    font-family: 'Lato', sans-serif;
 
 }
 
-
-
-body {
-    font-family: Arial, sans-serif;
-}
 
 
 /* Wrapper */
@@ -119,7 +115,7 @@ body {
     font-size: 16px;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: #CD6A30;
 }
 
 #status {
@@ -770,7 +766,6 @@ body {
 }
 
 .appointment-container {
-  font-family: Arial, sans-serif;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 20px;
@@ -904,7 +899,6 @@ body {
 .modal-content h2 {
     margin-bottom: 20px;
     color: #0085AA; /* Match the blue-gray text color */
-    font-family: 'Arial', sans-serif; /* Ensure the font family matches */
     font-weight: bold;
     font-size: 2rem; /* Increase size for a bold heading */
     text-align: left;
