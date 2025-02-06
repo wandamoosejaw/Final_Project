@@ -8,10 +8,11 @@
 }
 
 
-.section h2 {
+.section h1 {
     color: #CD6A30;
     font-weight: bold;
     font-size: 48px;
+    margin-left: 35px;
 }
 
 #calendar {

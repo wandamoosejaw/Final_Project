@@ -732,10 +732,18 @@ tr:nth-child(odd)  {  background-color: #fff;}
     color:#0085AA;
     border:0;
     outline: 0;
-    font-weight: bold;
     font-size: 20px;
     text-decoration: none;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
 
+
+.sub-navigation a.active {
+    border-bottom: 2px solid #0085AA;
+    font-weight: bold;
 }
 
 /* Hide sections by default */
@@ -781,3 +789,5 @@ tr:nth-child(odd)  {  background-color: #fff;}
 .demographics_inventory p {
     margin-left: 20px;
 }
+
+

@@ -75,6 +75,7 @@ input::placeholder {
 /* Appointment Request Table *****/
 
 .appointment-requests {
+    width: 1530px;
     margin-left: 35px;
     margin-top: 20px;
 }
@@ -121,7 +122,7 @@ input::placeholder {
 .appointment-requests tbody tr:nth-child(odd)  {  background-color: #fff;}
 
 /* Hover effect for the table rows */
-.patient_table tbody tr:hover {
+.appointment-requests tbody tr:hover {
     background-color: #e9f1ff;
 }
 
@@ -172,3 +173,47 @@ input::placeholder {
 .cell_centered {
     text-align: center;
 }
+
+
+.payment_type {
+    background-color: #EFF8FF;
+    color:#0085AA;
+    border-radius: 5px;
+    border: 1px solid #0085AA;
+    padding: 0.2rem;
+}
+
+.paid {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: 0.5rem;
+    background-color: rgb(48,205, 48, 0.3);
+    color:#0085AA;
+    border-radius: 5px;
+    
+    
+}
+
+.pending {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: 0.5rem;
+    background-color: rgb(255,138, 69, 0.3);
+    color:#0085AA;
+    border-radius: 5px;
+    
+}
+
+.overdue {
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    padding: 0.5rem;
+    background-color: rgb(255,255, 47, 0.3);
+    color:#0085AA;
+    border-radius: 5px;
+
+}
+

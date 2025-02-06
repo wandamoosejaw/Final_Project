@@ -117,10 +117,10 @@
                             <tr>
                                 <td>1</td>
                                 <td>Carlos Sainz</td>
-                                <td>Online Payment</td>
-                                <td>Paid</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
                                 <td class="cell_centered">2025-01-24</td>
-                                <td class="cell_centered">09:00 AM</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
                                 <td class="cell_centered">2025-01-20</td>
                                 <td>Dr. Juan Dela Cruz</td>
                                 <td>Check-up</td>
@@ -142,10 +142,10 @@
                             <tr>
                                 <td>2</td>
                                 <td>Carlos Sainz</td>
-                                <td >Online Payment</td>
-                                <td>Paid</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
                                 <td class="cell_centered">2025-01-24</td>
-                                <td class="cell_centered">09:00 AM</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
                                 <td class="cell_centered">2025-01-20</td>
                                 <td>Dr. Juan Dela Cruz</td>
                                 <td>Check-up</td>
@@ -167,10 +167,10 @@
                             <tr>
                                 <td>3</td>
                                 <td>Carlos Sainz</td>
-                                <td>Online Payment</td>
-                                <td>Paid</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
                                 <td class="cell_centered">2025-01-24</td>
-                                <td class="cell_centered">09:00 AM</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
                                 <td class="cell_centered">2025-01-20</td>
                                 <td>Dr. Juan Dela Cruz</td>
                                 <td>Check-up</td>
@@ -189,6 +189,7 @@
                                     </button>
                                 </td>
                             </tr>
+                </table>
 
         </div>
 
@@ -226,20 +227,21 @@
                 </thead>
                 <tbody>
                    <tr>
-                       <td>1</td>
+                       <td class="cell_center_content">1</td>
                         <td>Miguel Polison</td>
-                        <td>Cash</td>
-                       <td>Paid</td>
+                        <td><div class="payment_type">Online Payment</div></td>
+                        <td><div class="paid">Paid</div></td>
                         <td>2025-01-24</td>
-                        <td>13:00:00</td>
-                        <td>15:00:00</td>
-                        <td>Dr. Arnaldo</td>
-                        <td>Done</td>
-                        <td>2nd treatment</td>
+                        <td>09:00 AM - 10:00 AM</td>
+                        <td>2025-01-20</td>
+                        <td>Dr. Arnaldo Torillo</td>
+                        <td><div class="completed">Completed</div></td>
+                        <td>Regular Cleaning</td>
                         <td>
                             <form method='post' action='' >
                                 <input type='hidden' name='delete_id' class='cancel-btn'>
-                                <button class='cancel-btn' type='submit' name='delete_appointment' >Delete</button>
+                                <button class='cancel_btn' type='submit' name='delete_appointment'>
+                                    <span class="material-symbols-outlined">cancel</span> Cancel</button>
                             </form>
                         </td>
                     </tr>
@@ -249,7 +251,7 @@
 
              <!-- Calendar View Section -->
             <div id="calendar_view_section" class="section">
-            <h2>Calendar View</h2>
+            <h1>Calendar View</h1>
             <div id="calendar">
             </div>
 
@@ -259,38 +261,50 @@
     </div>
 
         
-   <!-- Script for display div in one frame (Appointment Section Specific) -->
-   <script>
-    // Function to show a specific section and hide others
-    function showRightPanelSection(sectionId) {
-        // Get all sections in the right panel
-        const sections = document.querySelectorAll('#right_panel .section');
-
-        // Hide all sections and remove 'active' class
-        sections.forEach(section => {
-            section.classList.remove('active');
-        });
-
-        // Show the selected section
-        const selectedSection = document.getElementById(sectionId);
-        if (selectedSection) {
-            selectedSection.classList.add('active');
+    <script>
+        function showRightPanelSection(sectionId) {
+            // Get all sections in the right panel
+            const sections = document.querySelectorAll('#right_panel .section');
+    
+            // Hide all sections and remove 'active' class
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+    
+            // Update the active state for navigation links
+            const navLinks = document.querySelectorAll('.sub-navigation a');
+            navLinks.forEach(link => link.classList.remove('active'));
+    
+            // Highlight the clicked link
+            const clickedLink = document.querySelector(`[onclick="showRightPanelSection('${sectionId}')"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
         }
-    }
-
-    // Initialize on page load
-    window.onload = function () {
-        // Hide all sections initially
-        const sections = document.querySelectorAll('#right_panel .section');
-        sections.forEach(section => section.classList.remove('active'));
-
-        // Show the default section (Request Section)
-        const defaultSection = document.getElementById('request_section');
-        if (defaultSection) {
-            defaultSection.classList.add('active');
-        }
-    };
+    
+        // Initialize on page load
+        window.onload = function () {
+            const sections = document.querySelectorAll('#right_panel .section');
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the default section (Request Section)
+            const defaultSection = document.getElementById('request_section');
+            if (defaultSection) {
+                defaultSection.classList.add('active');
+            }
+    
+            // Set default active link
+            const defaultLink = document.querySelector('.sub-navigation a:first-child');
+            if (defaultLink) {
+                defaultLink.classList.add('active');
+            }
+        };
     </script>
+    
 
 </body>
 </html>
