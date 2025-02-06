@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dentalassistantstyle.css">
+
+    <link rel="stylesheet" href="/src/css/da_inventory_dashboard.css">
+    <link rel="stylesheet" href="/src/css/da_inventory_itemlist.css">
+    <link rel="stylesheet" href="/src/css/da_inventory_supplier list.css">
+
     <title>Dental Assistant - Inventory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,14 +64,21 @@
         <div id="right_panel">
              <!--this for header where the profile icon located----->
              <div id="header">
+                <div class="sub-navigation">
+                    <a href="#" onclick="showRightPanelSection('inventory_dashboard_section')">Inventory Dashboard</a>
+                    <a href="#" onclick="showRightPanelSection('item_list_section')">Item List</a>
+                    <a href="#" onclick="showRightPanelSection('monitortrackusage_section')">Monitor and Track Usage</a>
+                    <a href="#" onclick="showRightPanelSection('suppliers_section')">Suppliers</a>
+                </div>
                 <div id="info" style="text-align: left;">
                     <p id="fullname">Carlos Sainz</p>
                     <p id="status">Dental Assistant</p>
                 </div>
                 <img id="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
             </div>
-            <!--this for the content of the page-->
-            <div id="content">
+
+            <!--inventory dashboard-->
+            <div id="inventory_dashboard_section" class="section">
                 <h1>Inventory Dashboard</h1>
                 <div class="inventory_dashboard_container">
                     <div class="alldata">
@@ -193,6 +205,141 @@
         
                     </div>
                 </div>
+            </div>
+
+            <!--item list-->
+            <div id="item_list_section" class="section">
+                <h1>Inventory Item List</h1>
+                <div class="search_group">
+                    <div class="search_box">
+                        <div class="row">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type = "text" id ="input-box" placeholder="Search item or item ID" autocomplete="off">  
+                        </div>
+                    </div>
+                    
+                    <button id="search_btn">  SEARCH</button>
+
+                    </div>    
+                </div>
+                <table class="item_list">
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Item Name</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Quantity Available</th>
+                            <th>Reorder Points</th>
+                            <th>Unit Type</th>
+                            <th>Supplier</th>
+                            <th>Expiry Date</th>
+                            <th>Last Restocked Date</th>
+                            <th>Location</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV002</td>
+                            <td>Nitrile Gloves</td>
+                            <td>Consumables</td>
+                            <td>Disposable gloves, medium</td>
+                            <td>500</td>
+                            <td>80</td>
+                            <td>pairs</td>
+                            <td>₱8.00</td>
+                            <td>HealthEssentials</td>
+                            <td>2025-01-24</td>
+                            <td>2025-01-20</td>
+                            <td>Storage Room A Shelf 1</td>
+            
+                        </tr>
+                        <tr>
+                            <td>INV003</td>
+                            <td>Anesthetic Gel</td>
+                            <td>Consumables</td>
+                            <td>Topical numbing gel</td>
+                            <td>150</td>
+                            <td>70</td>
+                            <td>tubes</td>
+                            <td>₱70.00</td>
+                            <td>DentalMed Inc.</td>
+                            <td>2025-01-24</td>
+                            <td>2025-01-20</td>
+                            <td>Storage Room A Shelf 1</td>
+            
+                        </tr>
+                </table>
+
+            </div>
+
+            <!--Monitor and Track Usage-->
+            <div id="monitortrackusage_section" class="section">
+                <h1>Monitor and Track Usage</h1>
+                <div class="search_group">
+                    <div class="search_box">
+                        <div class="row">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type = "text" id ="input-box" placeholder="Search item or item ID" autocomplete="off">  
+                        </div>
+                    </div>
+                </div>
+
+            </div>\
+
+            <!--Suppliers-->
+            <div id="suppliers_section" class="section">
+                <h1>Suppliers</h1>
+                <div class="search_group">
+                    <div class="search_box">
+                        <div class="row">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type = "text" id ="input-box" placeholder="Search supplier name or supplier ID" autocomplete="off">  
+                        </div>
+                    </div>
+                </div>
+                <table class="supplier_list">
+                    <thead>
+                        <tr>
+                            <th>Supplier ID</th>
+                            <th>Supplier Name Name</th>
+                            <th>Status</th>
+                            <th>Contact Person</th>
+                            <th>Contact Number</th>
+                            <th>Email</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Postal Code</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SUP001</td>
+                            <td>MedSupply Co.</td>
+                            <td><div class="active">Active</div></td>
+                            <td>Jane K. Santos</td>
+                            <td>0917-555-0123</td>
+                            <td>janet@medsupply.com</td>
+                            <td>123 Health St.</td>
+                            <td>Quezon City</td>
+                            <td>1105</td>
+                            <td>Specializes in Consumables</td>
+                        </tr>
+                        <tr>
+                            <td>SUP001</td>
+                            <td>Health Essentials</td>
+                            <td><div class="active">Active</div></td>
+                            <td>Carla G. Villanueva</td>
+                            <td>0917-555-6789</td>
+                            <td>carla@healthessentials.com</td>
+                            <td>456 Wellness Ave</td>
+                            <td>Makati</td>
+                            <td>1124</td>
+                            <td>Offers bulk discounts</td>
+                        </tr>
+                </table>
+
             </div>
             
 
