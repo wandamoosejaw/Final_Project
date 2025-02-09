@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/src/css/da_inventory_itemlist.css">
     <link rel="stylesheet" href="/src/css/da_inventory_supplier list.css">
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     <title>Dental Assistant - Inventory</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,19 +212,29 @@
             <!--item list-->
             <div id="item_list_section" class="section">
                 <h1>Inventory Item List</h1>
-                <div class="search_group">
-                    <div class="search_box">
-                        <div class="row">
-                            <span class="material-symbols-outlined">search</span>
-                            <input type = "text" id ="input-box" placeholder="Search item or item ID" autocomplete="off">  
-                        </div>
-                    </div>
-                    
-                    <button id="search_btn">  SEARCH</button>
 
-                    </div>    
+                <div class="top_group">
+                    <div class="search_group">
+                        <div class="search_box">
+                            <div class="row">
+                                <span class="material-symbols-outlined">search</span>
+                                <input type="text" id="input-box" placeholder="Search item or item ID" autocomplete="off">  
+                            </div>
+                        </div>
+                        
+                        <button id="search_btn">SEARCH</button>
+                    </div> 
+    
+                    <div class="add_update_buttons">
+                        <button id ="add_btn"> <span class="material-symbols-outlined">add</span>ADD NEW</button>
+                        <button id = "update_btn"><span class = "material-symbols-outlined">deployed_code_history</span>UPDATE STOCK LEVEL</button>
+                    </div>
+
                 </div>
-                <table class="item_list">
+                
+
+            
+                <table class="item_list_table">
                     <thead>
                         <tr>
                             <th>Item ID</th>
@@ -232,6 +244,7 @@
                             <th>Quantity Available</th>
                             <th>Reorder Points</th>
                             <th>Unit Type</th>
+                            <th>Unit Price</th>
                             <th>Supplier</th>
                             <th>Expiry Date</th>
                             <th>Last Restocked Date</th>
@@ -276,28 +289,32 @@
             <!--Monitor and Track Usage-->
             <div id="monitortrackusage_section" class="section">
                 <h1>Monitor and Track Usage</h1>
-                <div class="search_group">
-                    <div class="search_box">
-                        <div class="row">
-                            <span class="material-symbols-outlined">search</span>
-                            <input type = "text" id ="input-box" placeholder="Search item or item ID" autocomplete="off">  
-                        </div>
-                    </div>
-                </div>
+                
 
-            </div>\
+            </div>
 
             <!--Suppliers-->
             <div id="suppliers_section" class="section">
                 <h1>Suppliers</h1>
-                <div class="search_group">
-                    <div class="search_box">
-                        <div class="row">
-                            <span class="material-symbols-outlined">search</span>
-                            <input type = "text" id ="input-box" placeholder="Search supplier name or supplier ID" autocomplete="off">  
+                <div class="top_group">
+                    <div class="search_group">
+                        <div class="search_box">
+                            <div class="row">
+                                <span class="material-symbols-outlined">search</span>
+                                <input type = "text" id ="input-box" placeholder="Search supplier name or supplier ID" autocomplete="off">  
+                            </div>
                         </div>
+                        <button id="search_btn">SEARCH</button>
                     </div>
+                    <div class="add_edit">
+                        <button id="add_supplier_btn"><span class="material-symbols-outlined">add</span>ADD</button>
+                        <button id="edit_supplier_btn"> <span class="material-symbols-outlined">edit</span>EDIT</button>
+                    </div>
+
+
+
                 </div>
+                
                 <table class="supplier_list">
                     <thead>
                         <tr>
@@ -309,33 +326,33 @@
                             <th>Email</th>
                             <th>Address</th>
                             <th>City</th>
-                            <th>Postal Code</th>
+                            <th >Postal Code</th>
                             <th>Notes</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>SUP001</td>
+                            <td class="cell_center_content">SUP001</td>
                             <td>MedSupply Co.</td>
-                            <td><div class="active">Active</div></td>
+                            <td><div class="active_status">Active</div></td>
                             <td>Jane K. Santos</td>
-                            <td>0917-555-0123</td>
+                            <td class="cell_center_content">0917-555-0123</td>
                             <td>janet@medsupply.com</td>
                             <td>123 Health St.</td>
                             <td>Quezon City</td>
-                            <td>1105</td>
+                            <td class="cell_center_content">1105</td>
                             <td>Specializes in Consumables</td>
                         </tr>
                         <tr>
-                            <td>SUP001</td>
+                            <td class="cell_center_content">SUP001</td>
                             <td>Health Essentials</td>
-                            <td><div class="active">Active</div></td>
+                            <td><div class="active_status">Active</div></td>
                             <td>Carla G. Villanueva</td>
-                            <td>0917-555-6789</td>
+                            <td class="cell_center_content">0917-555-6789</td>
                             <td>carla@healthessentials.com</td>
                             <td>456 Wellness Ave</td>
                             <td>Makati</td>
-                            <td>1124</td>
+                            <td class="cell_center_content">1124</td>
                             <td>Offers bulk discounts</td>
                         </tr>
                 </table>
@@ -345,5 +362,49 @@
 
         </div>
     </div>
+
+    <script>
+        function showRightPanelSection(sectionId) {
+            // Get all sections in the right panel
+            const sections = document.querySelectorAll('#right_panel .section');
+    
+            // Hide all sections and remove 'active' class
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+    
+            // Update the active state for navigation links
+            const navLinks = document.querySelectorAll('.sub-navigation a');
+            navLinks.forEach(link => link.classList.remove('active'));
+    
+            // Highlight the clicked link
+            const clickedLink = document.querySelector(`[onclick="showRightPanelSection('${sectionId}')"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+        }
+    
+        // Initialize on page load
+        window.onload = function () {
+            const sections = document.querySelectorAll('#right_panel .section');
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the default section (Inventory Dashboard)
+            const defaultSection = document.getElementById('inventory_dashboard_section');
+            if (defaultSection) {
+                defaultSection.classList.add('active');
+            }
+    
+            // Set default active link
+            const defaultLink = document.querySelector('.sub-navigation a:first-child');
+            if (defaultLink) {
+                defaultLink.classList.add('active');
+            }
+        };
+    </script>
 </body>
 </html>
