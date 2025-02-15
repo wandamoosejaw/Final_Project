@@ -944,12 +944,14 @@ tr:nth-child(odd)  {  background-color: #fff;}
     display: flex;
     border: 0.3px solid #35C3A3;
     box-shadow: 0 4px 8px rgba(136, 186, 255, 0.2);
-    width: 550px;
+    width: 500px;
 
 }
 
 .file_header {
     display: flex;
+    gap: 120px;
+    align-items: center;
 }
 
 .doctor_name {
@@ -962,6 +964,40 @@ tr:nth-child(odd)  {  background-color: #fff;}
     font-size: 13px;
 }
 
+.file_name {
+    text-decoration: underline;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload {
+    background-color: #0085AA;
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    display: flex; /* Enables flexbox */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    gap: 8px; /* Adds spacing between the image and text */
+    padding: 8px 16px; /* Adds some padding for spacing */
+    font-weight: bold;
+    height: 40px;
+    cursor: pointer;
+}
+
+.visit_container {
+    display: flex;
+    gap: 50px;
+    padding: 10px 15px;
+}
+
+.date_visit, .time_visit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 /*PERSONAL DATA ==== Patient Profile connected in Patient CSS*/
 .personal-content h3 {
@@ -1168,8 +1204,60 @@ h3 {
 
 /*LABORATORY RESULTS ==== Patient Profile connected in Patient CSS*/
 
+.big_file_name {
+    font-weight: bold;
+    font-size: 28px;
+    color:#0085AA;
+    margin: 0;
+}
 
+.details_container {
+    display: flex;
+    padding: 30px 30px;
+    justify-content: space-between;
+    gap:10px;
+    align-items: center;
+    margin-right: 10px;
+    margin-left: 10px;
+}
 
+.block_container {
+    box-shadow: 0 4px 8px rgba(136, 186, 255, 0.5);
+    margin-top: 25px;
+}
+
+.view_button {
+    background-color:#0085AA;
+    padding: 15px 10px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    width: 180px;
+    height: 55px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.metadata {
+    display: flex;
+    align-items: center; /* Aligns text and bullet points properly */
+    gap: 5px; /* Controls spacing between date, time, and tag */
+    flex-wrap: wrap; /* Ensures proper wrapping on smaller screens */
+    margin: 0;
+}
+
+.leftside {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filedeets {
+    display: flex;
+    flex-direction: column;
+    gap:4px;
+}
 
 
 

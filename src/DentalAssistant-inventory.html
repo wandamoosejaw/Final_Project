@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/css/da_inventory_dashboard.css">
     <link rel="stylesheet" href="/src/css/da_inventory_itemlist.css">
     <link rel="stylesheet" href="/src/css/da_inventory_supplier list.css">
+    <link rel="stylesheet" href="/src/css/da_inventory_usage.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
@@ -293,6 +294,48 @@
             <!--Monitor and Track Usage-->
             <div id="monitortrackusage_section" class="section">
                 <h1>Monitor and Track Usage</h1>
+                <div class="top_group">
+                    <div class="search_group">
+                        <div class="search_box">
+                            <div class="row">
+                                <span class="material-symbols-outlined">search</span>
+                                <input type = "text" id ="input-box" placeholder="Search supplier name or supplier ID" autocomplete="off">  
+                            </div>
+                        </div>
+                        <button id="search_btn">SEARCH</button>
+                    </div>
+                    <div class="add_edit">
+                        <button id="add_supplier_btn"><span class="material-symbols-outlined">add</span>ADD</button>
+                        <button id="edit_supplier_btn"> <span class="material-symbols-outlined">edit</span>EDIT</button>
+                    </div>
+
+
+
+                </div>
+                <table class= "usage_table">
+                    <tr>
+                        <th>Usage ID</th>
+                        <th>Patient Name</th>
+                        <th>Procedure</th>
+                        <th>Date of Procedure</th>
+                        <th>Item Used</th>
+                        <th>Quantity</th>
+                        <th>Unit Type</th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+
+
+
+                </table>
                 
 
             </div>
