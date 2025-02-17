@@ -133,10 +133,6 @@
                                         <span class="material-symbols-outlined">check</span> 
                                         Approve
                                     </button>
-                                    <button class="move_btn">
-                                        <span class="material-symbols-outlined">trending_flat</span> 
-                                        Move
-                                    </button>
                                     <button class="cancel_btn">
                                         <span class="material-symbols-outlined">cancel</span> 
                                         Cancel
@@ -158,10 +154,6 @@
                                         <span class="material-symbols-outlined">check</span> 
                                         Approve
                                     </button>
-                                    <button class="move_btn">
-                                        <span class="material-symbols-outlined">trending_flat</span> 
-                                        Move
-                                    </button>
                                     <button class="cancel_btn">
                                         <span class="material-symbols-outlined">cancel</span> 
                                         Cancel
@@ -182,10 +174,6 @@
                                     <button class="approve_btn">
                                         <span class="material-symbols-outlined">check</span> 
                                         Approve
-                                    </button>
-                                    <button class="move_btn">
-                                        <span class="material-symbols-outlined">trending_flat</span> 
-                                        Move
                                     </button>
                                     <button class="cancel_btn">
                                         <span class="material-symbols-outlined">cancel</span> 
@@ -231,7 +219,7 @@
                 </thead>
                 <tbody>
                    <tr>
-                       <td class="cell_center_content">1</td>
+                       <td>1</td>
                         <td>Miguel Polison</td>
                         <td><div class="payment_type">Online Payment</div></td>
                         <td><div class="paid">Paid</div></td>
@@ -241,12 +229,15 @@
                         <td>Dr. Arnaldo Torillo</td>
                         <td><div class="completed">Completed</div></td>
                         <td>Regular Cleaning</td>
-                        <td>
+                        <td class="action_appointment">
                             <form method='post' action='' >
                                 <input type='hidden' name='delete_id' class='cancel-btn'>
                                 <button class='cancel_btn' type='submit' name='delete_appointment'>
                                     <span class="material-symbols-outlined">cancel</span> Cancel</button>
                             </form>
+
+                            <button class='mark_as_complete' type='submit' name='mark_as_complete_appointment'>
+                                <span class="material-symbols-outlined">check</span> Mark as Complete</button>
                         </td>
                     </tr>
                 </tbody>

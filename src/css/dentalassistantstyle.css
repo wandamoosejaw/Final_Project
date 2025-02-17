@@ -822,6 +822,24 @@ tr:nth-child(odd)  {  background-color: #fff;}
     font-weight: bold;
 }
 
+.mark_as_complete {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    color: #35C3A3;
+    border: 1px solid #35C3A3;
+}
+
+
+
+
 /*Patient Profile connected in Patient CSS*/
 
 

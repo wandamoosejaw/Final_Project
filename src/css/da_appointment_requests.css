@@ -136,7 +136,7 @@ input::placeholder {
 }
 
 /* Button properties */
-.approve_btn, .move_btn, .cancel_btn {
+.approve_btn, .cancel_btn {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -154,10 +154,7 @@ input::placeholder {
     border: 1px solid #35C3A3;
 }
 
-.move_btn {
-    color: #CD6A30;
-    border: 1px solid #CD6A30;
-}
+
 
 .cancel_btn {
     color: #FF2F2F;
@@ -216,4 +213,3 @@ input::placeholder {
     border-radius: 5px;
 
 }
-

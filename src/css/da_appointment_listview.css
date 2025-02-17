@@ -210,4 +210,26 @@ input::placeholder {
     background-color: rgb(255,47, 47, 0.5);
 }
 
+.mark_as_complete {
+    display: inline-flex; /* Ensures buttons stay inline */
+    white-space: nowrap; /* Prevents text from breaking into multiple lines */
+    gap: 0.5rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    color: #35C3A3;
+    border: 1px solid #35C3A3;
+    
+    
+}
 
+
+.action_appointment {
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
