@@ -1110,3 +1110,103 @@ tr:nth-child(odd)  {  background-color: #fff;}
 #generate_report:hover {
     background-color: #006b88;
 }
+
+/*Patient Profile connected in Patient CSS*/
+#patient-section {
+    width: 80%;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+#header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+#profile {
+    display: flex;
+    align-items: center;
+}
+#profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+#profile-info h2 {
+    margin: 0;
+    color: #007bff;
+}
+#tabs {
+    display: flex;
+    margin-top: 10px;
+    border-bottom: 2px solid #ddd;
+}
+#tabs a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #0085AA;
+    
+}
+#tabs .active {
+    border-bottom: 3px solid #0085AA;
+    font-weight: bold;
+}
+
+/* Align items in header with selection */
+#header_with_selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+    padding-top: 34px;
+    padding-bottom: 0px;
+    width: 100%;
+   
+}
+
+.profile_left {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: center;
+    padding-bottom: 22px;
+}
+
+/* Personnel Directory */
+
+.personnel_list {
+    background: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 10px;
+    margin-left: 35px;
+}
+
+.personnelcontainer {
+    display: flex;
+    align-items: center;
+    width: 1530px;
+}
+
+.personnelcontainer:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.personnelcontainer img {
+    width: 80px; /* Adjust size as needed */
+    height: 80px;
+    margin-right: 15px; /* Space between image and text */
+}
+
+.personnel_info h2,
+.personnel_info p {
+    margin: 0;
+    padding: 0;
+}
+
