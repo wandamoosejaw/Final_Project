@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/adminstyle.css">
-    <title>Dental Assistant - Dashboard</title>
+    <title>Admin - Homepage</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -27,38 +27,38 @@
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-notification.html">
-                    <img src="icons/dentalassistant/notif_icon.png" alt="Notifications"> Appointments
+                <a href="Admin-appointments.html">
+                    <img src="icons/dentalassistant/calendar_icon.png" alt="Appointments"> Appointments
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-appointment.html">
-                    <img src="icons/dentalassistant/calendar_icon.png" alt="Patients"> Patients
+                <a href="Admin-patients.html">
+                    <img src="icons/dentalassistant/patient_icon.png" alt="Patients"> Patients
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-patients.html">
-                    <img src="icons/dentalassistant/patient_icon.png" alt="Procedure List"> Procedure List
+                <a href="Admin-procedurelist.html">
+                    <img src="icons/admin/procedurelist_icon.png" alt="Procedure List"> Procedure List
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-inventory.html">
-                    <img src="icons/dentalassistant/inventory_icon.png" alt="Personnel Directory"> Personnel Directory
+                <a href="Admin-personneldirectory.html">
+                    <img src="icons/dentalassistant/profile_icon.png" alt="Personnel Directory"> Personnel Directory
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-profile.html">
-                    <img src="icons/dentalassistant/profile_icon.png" alt="Reports and Analytics"> Reports and Analytics
+                <a href="Admin-reportsandanalytics.html">
+                    <img src="icons/admin/reports_icon.png" alt="Reports and Analytics"> Reports and Analytics
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-profile.html">
-                    <img src="icons/dentalassistant/profile_icon.png" alt="Billing and Income"> Billing and Income
+                <a href="Admin-billingandincome.html">
+                    <img src="icons/admin/wallet_icon.png" alt="Billing and Income"> Billing and Income
                 </a>
             </label>
             <label>
-                <a href="DentalAssistant-profile.html">
-                    <img src="icons/dentalassistant/profile_icon.png" alt="Inventory"> Inventory
+                <a href="Admin-inventory.html">
+                    <img src="icons/dentalassistant/inventory_icon.png" alt="Inventory"> Inventory
                 </a>
             </label>
             <label>
@@ -75,13 +75,13 @@
             <div id="header">
                 <div id="info" style="text-align: left;">
                     <p id="fullname">Carlos Sainz</p>
-                    <p id="status">Dental Assistant</p>
+                    <p id="status">System Administrator</p>
                 </div>
                 <img id="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
             </div>
 
             <!-- this div where the main content located-->
-            <div id="content">
+            <div class="content">
                 <h1>Dashboard</h1>
                 <div class="dateandtime_container">
                     <div class="date_container">
@@ -93,148 +93,115 @@
                         <p id="time">12:00:01 PM</p>
                     </div>
                 </div>
+
                 <div class="alldata">
-                    <div class="data"> 
-                        <div class="quantities"> 
-                            <div class="quantity"> <!-- Numbers-->
-                                <h2>23</h2>
-                                <p>Total Inventory Value</p>
+                    <div class="left_side_data">
+                        <div class="number_row">
+                            <div class="numrow">
+                                <h2>31</h2>
+                                <p>Number of equipment that needs restocking</p>
                             </div>
-                            <div class="quantity">
-                                <h2>23</h2>
-                                <p>Items Low on Stock</p>
+                            <div class="numrow">
+                                <h2>31</h2>
+                                <p>Equipment available</p>
                             </div>
-                            <div class="quantity">
-                                <h2>23</h2>
-                                <p>Approved Appointments Today</p>
+                            <div class="numrow">
+                                <h2>31</h2>
+                                <p>Expired consumables</p>
                             </div>
-                            <div class="quantity">
-                                <h2>22,123</h2>
-                                <p>On-time Supplier Rate</p>
-                            </div>
-                        </div>
-                        <div class="distribution"> <!-- Chart-->
-                            <h3> Weekly Appointment Distribution</h3>
-                            <div class="barchart_container">
-                                <canvas id="weekly-appointment-distribution-chart"></canvas> <!-- Canvas element for the chart -->
-                            </div>
-                            
-                        </div>
-                        <div class="piecharts">
-                            <div class="demographics">
-                                <h3>Top Appointment Types</h3>
-                                <div class="toprank">
-                                    <div class="topnumrank">
-                                        <p>1</p>
-                                        <p>2</p>
-                                        <p>3</p>
-                                        <p>4</p>
-                                        <p>5</p>
-        
-                                    </div>
-        
-                                    <div class="topitemsranked">
-                                        <p>Item 1</p>
-                                        <p>Item 2</p>
-                                        <p>Item 3</p>
-                                        <p>Item 4</p>
-                                        <p>Item 5</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="demographics">
-                                <h3>Payment Type Distribution</h3>
-                                <div class="piechart_container">
-                                    <canvas id="piec_paymenttype" height="200"></canvas>
-                                </div>
-                            </div>
-                            <div class="demographics">
-                                <h3>Patient Age demographics</h3>
-                            </div>
-                            <div class="demographics">
-                                <h3>Appointment Status Distribution</h3>
+                            <div class="numrow">
+                                <h2>31</h2>
+                                <p>Total appointments for the months</p>
                             </div>
                         </div>
-    
-                    </div>
-                    <div class="lists">
-                        <div class="top">
-                            <h3>Low Stock Alerts</h3>
-                            <div class="rank">
-                                <div class="numrank">
-                                    <p>1</p>
-                                    <p>2</p>
-                                    <p>3</p>
-    
-                                </div>
-    
-                                <div class="itemsranked">
-                                    <p>Item 1</p>
-                                    <p>Item 2</p>
-                                    <p>Item 3</p>
-                                </div>
-                            </div>
+                        <div class="weekly_appointment_distribution">
+
                         </div>
-                        <div class="top">
-                            <h3>Soon-to-Expire Items</h3>
-                            <div class="rank">
-                                <div class="numrank">
-                                    <p>1</p>
-                                    <p>2</p>
-                                    <p>3</p>
-    
-                                </div>
-    
-                                <div class="itemsranked">
-                                    <p>Item 1</p>
-                                    <p>Item 2</p>
-                                    <p>Item 3</p>
-                                </div>
+                        <div class="lastnumrow">
+                            <div class="list_bottom">
+                                <h3>Top 5 Most Requested Appointment Types</h3>
+                                <ul>
+                                    <li>1 Dental Cleaning: 48 appointments</li>
+                                    <li>2 Tooth Extraction: 32 appointments</li>
+                                    <li>3 Dental Filling: 15 appointments</li>
+                                    <li>4 Dental Crown: 10 appointments</li>
+                                    <li>5 Dental Implant: 5 appointments</li>
+                                </ul> 
                             </div>
-                        </div>
-                        <div class="top">
-                            <h3>Upcoming Procedure Resource Forecast</h3>
-                            <div class="rank">
-                                <div class="numrank">
-                                    <p>1</p>
-                                    <p>2</p>
-                                    <p>3</p>
-    
-                                </div>
-    
-                                <div class="itemsranked">
-                                    <p>Item 1</p>
-                                    <p>Item 2</p>
-                                    <p>Item 3</p>
-                                </div>
+                            <div class="list_bottom">
+                                <h3>Request Order</h3>
+                                <ul>
+                                    <li>1 Composite Filling Kits</li>
+                                    <li>2 Mouth Riinses</li>
+                                    <li>3 Dental Cements</li>
+                                    <li>4 Dental Bibs</li>
+                                    <li>5 Latex Gloves</li>
+                                </ul> 
+
                             </div>
-                        </div>
-                        <div class="top">
-                            <h3>Top 5 Used Items</h3>
-                            <div class="rank">
-                                <div class="numrank">
-                                    <p>1</p>
-                                    <p>2</p>
-                                    <p>3</p>
-                                    <p>4</p>
-                                    <p>5</p>
-    
-                                </div>
-    
-                                <div class="itemsranked">
-                                    <p>Item 1</p>
-                                    <p>Item 2</p>
-                                    <p>Item 3</p>
-                                    <p>Item 4</p>
-                                    <p>Item 5</p>
-                                </div>
+                            <div class="list_bottom">
+                                <h3>Top 5 Used Items</h3>
+                                <ul>
+                                    <li>1 Latex Gloves: 540 units</li>
+                                    <li>2 Cotton Rolls: 300 units</li>
+                                    <li>3 Disposable Masks: 250 units</li>
+                                    <li>4 Dental Bibs: 200 units</li>
+                                    <li>5 Anesthetic Cartridges: 150 units</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-    
+
+                    <div class="right_side_data">
+                        <h2>KEY PERFORMANCE INDICATOR</h2>
+                        <div class="kpi">
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>Registered dentists</p>
+                                </div>
+                            </div>
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>Dental Assistants on Duty</p>
+                                </div>
+                            </div>
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>Available staffs</p>
+                                </div>
+                            </div>
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>Patients</p>
+                                </div>
+                            </div>
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>Pending Patients</p>
+                                </div>
+                            </div>
+
+                            <div class="kpi_row">
+                                <div class="kpi_data">
+                                    <h3>156</h3>
+                                    <p>New Patient Registration (This Month)</p>
+                                </div>
+                            </div>
+                         
+
+                        </div>
+                    </div>
                 </div>
 
-                </div>
+            </div>
+            
+    
+        </div>
 
 <!---Link to JS---->
 <script src="js/dental_assistant.js"></script>

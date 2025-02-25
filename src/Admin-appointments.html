@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/adminstyle.css">
+
+    <link rel="stylesheet" href="/src/css/admin_appointment_requests.css">
+    <link rel="stylesheet" href="/src/css/admin_appointment_listview.css">
+    <link rel="stylesheet" href="/src/css/admin_appointment_calendarview.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!--JS calendar-->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar/index.global.min.js'></script>
+
+    <title>Dental Assistant - Appointments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body> 
+
+    <!-- main div -->   
+    <div id="wrapper">
+
+        <!-- this the left panel located-->
+        <div id="left_panel">
+            <img id="logo" src="icons/dentalassistant/logo_seek4smiles.png" alt="Logo"> <!-- Add your logo image path -->
+        
+            <label>
+                <a href="Admin-homepage.html">
+                    <img src="icons/dentalassistant/dashboard_icon.png" alt="Dashboard"> Dashboard
+                </a>
+            </label>
+            <label>
+                <a href="Admin-appointments.html">
+                    <img src="icons/dentalassistant/calendar_icon.png" alt="Appointments"> Appointments
+                </a>
+            </label>
+            <label>
+                <a href="Admin-patients.html">
+                    <img src="icons/dentalassistant/patient_icon.png" alt="Patients"> Patients
+                </a>
+            </label>
+            <label>
+                <a href="Admin-procedurelist.html">
+                    <img src="icons/admin/procedurelist_icon.png" alt="Procedure List"> Procedure List
+                </a>
+            </label>
+            <label>
+                <a href="Admin-personneldirectory.html">
+                    <img src="icons/dentalassistant/profile_icon.png" alt="Personnel Directory"> Personnel Directory
+                </a>
+            </label>
+            <label>
+                <a href="Admin-reportsandanalytics.html">
+                    <img src="icons/admin/reports_icon.png" alt="Reports and Analytics"> Reports and Analytics
+                </a>
+            </label>
+            <label>
+                <a href="Admin-billingandincome.html">
+                    <img src="icons/admin/wallet_icon.png" alt="Billing and Income"> Billing and Income
+                </a>
+            </label>
+            <label>
+                <a href="Admin-inventory.html">
+                    <img src="icons/dentalassistant/inventory_icon.png" alt="Inventory"> Inventory
+                </a>
+            </label>
+            <label>
+                <a href="index.html">
+                    <img src="icons/dentalassistant/signout_icon.png" alt="Sign Out"> Sign Out
+                </a>
+            </label>
+        </div>
+
+        <!-- this div where the rigth panel located and the other feature-->
+        <div id="right_panel">
+            <!--this for header where the profile icon located----->
+            <div id="header_with_selection">
+                <div class="sub-navigation">
+                    <a href="#" onclick="showRightPanelSection('request_section')">Request</a>
+                    <a href="#" onclick="showRightPanelSection('list_view_section')">List View</a>
+                    <a href="#" onclick="showRightPanelSection('calendar_view_section')">Calendar View</a>
+                </div>
+                <div class="profile_left">
+                    <div id="info" style="text-align: left;">
+                        <p id="fullname">Carlos Sainz</p>
+                        <p id="status">System Administrator</p>
+                    </div>
+                    <img id="profile_icon" src="img/CarlosID.png" alt="Profile Icon">
+
+                </div>
+                
+            </div>
+
+             <!-- request section-->
+            <div id="request_section" class="section">
+                <!-- Request  sections -->
+                <div class="main_content">
+                    <h1>Appointment Requests</h1>
+                    <div class="search_group">
+                        <div class="search_box">
+                            <div class="row">
+                                <span class="material-symbols-outlined">search</span>
+                                <input type = "text" id ="input-box" placeholder="Search appointments" autocomplete="off">  
+                            </div>
+                        </div>
+                        
+                        <button id="search_btn">  SEARCH</button>
+    
+                        </div>    
+                    </div>
+                    <table class="appointment-requests">
+                        <thead>
+                            <tr>
+                                <th>Patient ID</th>
+                                <th>Patient Name</th>
+                                <th>Payment Type</th>
+                                <th>Payment Status</th>
+                                <th>Requested Date</th>
+                                <th>Requested Time</th>
+                                <th>Date of Request</th>
+                                <th>Requested Dentist</th>
+                                <th>Reason for Booking the Appointment</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Carlos Sainz</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
+                                <td class="cell_centered">2025-01-24</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
+                                <td class="cell_centered">2025-01-20</td>
+                                <td>Dr. Juan Dela Cruz</td>
+                                <td>Check-up</td>
+                                <td class="cell_center_content">
+                                    <button class="approve_btn">
+                                        <span class="material-symbols-outlined">check</span> 
+                                        Approve
+                                    </button>
+                                    <button class="cancel_btn">
+                                        <span class="material-symbols-outlined">cancel</span> 
+                                        Cancel
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Carlos Sainz</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
+                                <td class="cell_centered">2025-01-24</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
+                                <td class="cell_centered">2025-01-20</td>
+                                <td>Dr. Juan Dela Cruz</td>
+                                <td>Check-up</td>
+                                <td class="cell_center_content">
+                                    <button class="approve_btn">
+                                        <span class="material-symbols-outlined">check</span> 
+                                        Approve
+                                    </button>
+                                    <button class="cancel_btn">
+                                        <span class="material-symbols-outlined">cancel</span> 
+                                        Cancel
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Carlos Sainz</td>
+                                <td><div class="payment_type">Online Payment</div></td>
+                                <td><div class="paid">Paid</div></td>
+                                <td class="cell_centered">2025-01-24</td>
+                                <td class="cell_centered">09:00 AM - 09:30 AM</td>
+                                <td class="cell_centered">2025-01-20</td>
+                                <td>Dr. Juan Dela Cruz</td>
+                                <td>Check-up</td>
+                                <td class="cell_center_content">
+                                    <button class="approve_btn">
+                                        <span class="material-symbols-outlined">check</span> 
+                                        Approve
+                                    </button>
+                                    <button class="cancel_btn">
+                                        <span class="material-symbols-outlined">cancel</span> 
+                                        Cancel
+                                    </button>
+                                </td>
+                            </tr>
+                </table>
+
+        </div>
+
+        <!-- List View Section -->
+         <div id="list_view_section" class="section">
+            <div class="main_content">
+                <h1>Appointment List</h1>
+                <div class="search_group">
+                    <div class="search_box">
+                        <div class="row">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type = "text" id ="input-box" placeholder="Search appointments" autocomplete="off">  
+                        </div>
+                    </div>
+                    
+                    <button id="search_btn">  SEARCH</button>
+
+                    </div>    
+                </div>
+                <table class="appointments-table">
+                <thead>
+                    <tr>
+                        <th>Patient ID</th>
+                        <th>Patient Name</th>
+                        <th>Payment Type</th>
+                        <th>Payment Status</th>
+                        <th>Requested Date</th>
+                        <th>Requested Time</th>
+                        <th>Date of Request</th>
+                        <th>Requested Dentist</th>
+                        <th>Appointment Status</th>
+                        <th>Reason for Booking</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr>
+                       <td>1</td>
+                        <td>Miguel Polison</td>
+                        <td><div class="payment_type">Online Payment</div></td>
+                        <td><div class="paid">Paid</div></td>
+                        <td>2025-01-24</td>
+                        <td>09:00 AM - 10:00 AM</td>
+                        <td>2025-01-20</td>
+                        <td>Dr. Arnaldo Torillo</td>
+                        <td><div class="completed">Completed</div></td>
+                        <td>Regular Cleaning</td>
+                        <td class="action_appointment">
+                            <form method='post' action='' >
+                                <input type='hidden' name='delete_id' class='cancel-btn'>
+                                <button class='cancel_btn' type='submit' name='delete_appointment'>
+                                    <span class="material-symbols-outlined">cancel</span> Cancel</button>
+                            </form>
+
+                            <button class='mark_as_complete' type='submit' name='mark_as_complete_appointment'>
+                                <span class="material-symbols-outlined">check</span> Mark as Complete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+             <!-- Calendar View Section -->
+            <div id="calendar_view_section" class="section">
+            <h1>Calendar View</h1>
+            <div id="calendar">
+            </div>
+
+        </div>
+    
+      
+    </div>
+
+        
+    <script>
+        function showRightPanelSection(sectionId) {
+            // Get all sections in the right panel
+            const sections = document.querySelectorAll('#right_panel .section');
+    
+            // Hide all sections and remove 'active' class
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+    
+            // Update the active state for navigation links
+            const navLinks = document.querySelectorAll('.sub-navigation a');
+            navLinks.forEach(link => link.classList.remove('active'));
+    
+            // Highlight the clicked link
+            const clickedLink = document.querySelector(`[onclick="showRightPanelSection('${sectionId}')"]`);
+            if (clickedLink) {
+                clickedLink.classList.add('active');
+            }
+        }
+    
+        // Initialize on page load
+        window.onload = function () {
+            const sections = document.querySelectorAll('#right_panel .section');
+            sections.forEach(section => section.classList.remove('active'));
+    
+            // Show the default section (Request Section)
+            const defaultSection = document.getElementById('request_section');
+            if (defaultSection) {
+                defaultSection.classList.add('active');
+            }
+    
+            // Set default active link
+            const defaultLink = document.querySelector('.sub-navigation a:first-child');
+            if (defaultLink) {
+                defaultLink.classList.add('active');
+            }
+        };
+    </script>
+    
+
+</body>
+</html>
