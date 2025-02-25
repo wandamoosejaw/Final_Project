@@ -1,0 +1,183 @@
+/* Dashboard ----------------------------------------- */
+.distribution_inventory {
+    background-color: #FFFFFF;
+    width: 1219px;
+    height: 457px;
+    
+}
+
+.distribution_inventory h3 {
+    padding-top: 20px;
+}
+
+
+
+.demographics_inventory {
+    background-color: white;
+    width: 594px;
+    height: 204px;
+
+}
+
+.demographics_inventory h3, .distribution_inventory h3 {
+    color: #0085AA;
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.demographics_inventory p {
+    margin-left: 20px;
+}
+
+/* Quantities/ KPIs */
+.quantities {
+    display: flex;
+    justify-content: space-between;
+    width: 1220px;
+    height: 121px;
+    
+    
+}
+
+.quantity {
+    background-color: #FFFFFF;
+    height: 121px;
+    width: 290px;  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack the number and label */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding-bottom: 24px; /* Reserve 24px for the bottom */
+    
+}
+
+.quantity h2 {
+    color:#0085AA;
+    font-size: 55px;
+    width: 251px;
+    height: 57px;  
+    margin-bottom: 11px;
+    
+}
+
+.quantity p {
+    color: #1E1E1E;
+    font-size: 14px;
+    width: 251px;
+    margin-bottom: 24px;
+    
+}
+
+
+/*Lists*/
+
+.lists {
+    max-height: 822px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.top {
+    width: 290px;
+    background-color: #FFFFFF;
+    flex-grow: 1;
+    
+}
+
+.top h3 {
+    color:#0085AA;
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 13px;
+    margin-top: 11px;
+    margin-bottom: 10px;
+    
+
+}
+
+.rank {
+    display: flex;
+    margin-left: 13px;
+}
+
+.numrank {
+    color: #1E1E1E;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.itemsranked {
+    color: #1E1E1E;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+#content h1 {
+    margin-left: 35px;
+    font-size: 48px;
+    font-weight: bold;
+    color: #CD6A30; 
+}
+
+.alldata {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 34px;
+    
+}
+
+
+.toprank {
+    display: flex;
+    margin-left: 13px;
+}
+
+.topnumrank {
+    color: #1E1E1E;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.topitemsranked {
+    color: #1E1E1E;
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+
+
+
+.piechart_container canvas {
+    width: 100%;
+    height: auto;
+}
+
+.piechart_container {
+    flex-direction: row;
+    width: 270px;
+    height: 158px;
+}
+
+.demographics {
+    
+    background-color: #FFFFFF;
+    width: 290px;
+    height: 278px;
+    box-sizing: border-box;
+    padding: 15px 0 0 15px;
+
+}
+
+.piecharts {
+    width: 1220px;
+    height: 278px; 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+    
+}
