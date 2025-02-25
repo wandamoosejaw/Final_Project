@@ -619,7 +619,7 @@ input::placeholder {
 
 /* Center alignment for certain columns */
 .cell_center_content {
-    text-align: center;
+    text-align: center; 
 }
 
 /* Alternating row colors */
